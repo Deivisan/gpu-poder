@@ -1,0 +1,1437 @@
+ninja: Entering directory `build/'
+[1/1425] Compiling C object src/c11/impl/libmesa_util_c11.a.p/time.c.o
+[2/1425] Compiling C object src/util/blake3/libblake3.a.p/blake3_dispatch.c.o
+[3/1425] Compiling C object src/util/libmesa_util.a.p/meson-generated_.._format_srgb.c.o
+[4/1425] Compiling C object src/util/libmesa_util.a.p/anon_file.c.o
+[5/1425] Compiling C object src/util/libmesa_util.a.p/bitscan.c.o
+[6/1425] Compiling C object src/util/libmesa_util_sse41.a.p/streaming-load-memcpy.c.o
+[7/1425] Compiling C object src/c11/impl/libmesa_util_c11.a.p/threads_posix.c.o
+[8/1425] Compiling C object src/util/libmesa_util.a.p/cnd_monotonic.c.o
+[9/1425] Compiling C object src/util/libmesa_util.a.p/compress.c.o
+[10/1425] Compiling C object src/util/libmesa_util.a.p/build_id.c.o
+[11/1425] Compiling C object src/util/libmesa_util.a.p/thread_sched.c.o
+[12/1425] Compiling C object src/util/libmesa_util.a.p/crc32.c.o
+[13/1425] Compiling C object src/util/blake3/libblake3.a.p/blake3_portable.c.o
+[14/1425] Compiling C object src/util/libmesa_util.a.p/double.c.o
+[15/1425] Compiling C object src/util/libmesa_util.a.p/dag.c.o
+[16/1425] Compiling C object src/util/libmesa_util.a.p/fast_idiv_by_const.c.o
+[17/1425] Compiling C object src/util/libmesa_util.a.p/futex.c.o
+[18/1425] Compiling C object src/util/libmesa_util.a.p/disk_cache.c.o
+[19/1425] Compiling C object src/util/libmesa_util.a.p/blob.c.o
+../src/util/blob.c: In function ‘blob_read_string’:
+../src/util/blob.c:344:8: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  344 |    nul = memchr(blob->current, 0, blob->end - blob->current);
+      |        ^
+[20/1425] Compiling C object src/util/blake3/libblake3.a.p/blake3_neon.c.o
+[21/1425] Compiling C object src/util/libmesa_util.a.p/helpers.c.o
+[22/1425] Compiling C object src/util/libmesa_util.a.p/memstream.c.o
+[23/1425] Compiling C object src/util/blake3/libblake3.a.p/blake3.c.o
+In function ‘compress_parents_parallel’,
+    inlined from ‘compress_subtree_to_parent_node’ at ../src/util/blake3/blake3.c:358:9,
+    inlined from ‘blake3_hasher_update.part.0’ at ../src/util/blake3/blake3.c:543:7:
+../src/util/blake3/blake3.c:238:5: warning: ‘memcpy’ offset [64, 95] is out of the bounds [0, 64] of object ‘out_array’ with type ‘uint8_t[64]’ {aka ‘unsigned char[64]’} [-Warray-bounds=]
+  238 |     memcpy(&out[parents_array_len * BLAKE3_OUT_LEN],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  239 |            &child_chaining_values[2 * parents_array_len * BLAKE3_OUT_LEN],
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  240 |            BLAKE3_OUT_LEN);
+      |            ~~~~~~~~~~~~~~~
+../src/util/blake3/blake3.c: In function ‘blake3_hasher_update.part.0’:
+../src/util/blake3/blake3.c:355:11: note: ‘out_array’ declared here
+  355 |   uint8_t out_array[MAX_SIMD_DEGREE_OR_2 * BLAKE3_OUT_LEN / 2];
+      |           ^~~~~~~~~
+In function ‘compress_subtree_to_parent_node’,
+    inlined from ‘blake3_hasher_update.part.0’ at ../src/util/blake3/blake3.c:543:7:
+../src/util/blake3/blake3.c:359:5: warning: ‘memcpy’ forming offset [64, 95] is out of the bounds [0, 64] of object ‘out_array’ with type ‘uint8_t[64]’ {aka ‘unsigned char[64]’} [-Warray-bounds=]
+  359 |     memcpy(cv_array, out_array, num_cvs * BLAKE3_OUT_LEN);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/util/blake3/blake3.c: In function ‘blake3_hasher_update.part.0’:
+../src/util/blake3/blake3.c:355:11: note: ‘out_array’ declared here
+  355 |   uint8_t out_array[MAX_SIMD_DEGREE_OR_2 * BLAKE3_OUT_LEN / 2];
+      |           ^~~~~~~~~
+[24/1425] Compiling C object src/util/libmesa_util.a.p/half_float.c.o
+[25/1425] Compiling C object src/util/libmesa_util.a.p/mesa-sha1.c.o
+[26/1425] Compiling C object src/util/libmesa_util.a.p/fossilize_db.c.o
+[27/1425] Compiling C object src/util/libmesa_util.a.p/disk_cache_os.c.o
+[28/1425] Compiling C object src/util/libmesa_util.a.p/log.c.o
+[29/1425] Compiling C object src/util/libmesa_util.a.p/os_time.c.o
+[30/1425] Compiling C object src/util/libmesa_util.a.p/os_file.c.o
+[31/1425] Compiling C object src/util/libmesa_util.a.p/mesa-blake3.c.o
+[32/1425] Compiling C object src/util/libmesa_util.a.p/rwlock.c.o
+[33/1425] Compiling C object src/util/libmesa_util.a.p/os_socket.c.o
+[34/1425] Compiling C object src/util/libmesa_util.a.p/u_idalloc.c.o
+[35/1425] Compiling C object src/util/libmesa_util.a.p/os_misc.c.o
+[36/1425] Compiling C object src/util/libmesa_util.a.p/u_process.c.o
+[37/1425] Compiling C object src/util/libmesa_util.a.p/rand_xor.c.o
+[38/1425] Compiling C object src/util/libmesa_util.a.p/os_memory_fd.c.o
+[39/1425] Compiling C++ object src/util/libmesa_util.a.p/u_qsort.cpp.o
+[40/1425] Compiling C object src/util/libmesa_util.a.p/sha1_sha1.c.o
+In function ‘SHA1Update’,
+    inlined from ‘SHA1Pad’ at ../src/util/sha1/sha1.c:157:2,
+    inlined from ‘SHA1Final’ at ../src/util/sha1/sha1.c:168:2:
+../src/util/sha1/sha1.c:135:25: warning: ‘SHA1Transform’ reading 64 bytes from a region of size 1 [-Wstringop-overread]
+  135 |                         SHA1Transform(context->state, (uint8_t *)&data[i]);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/util/sha1/sha1.c:135:25: note: referencing argument 2 of type ‘const uint8_t[64]’ {aka ‘const unsigned char[64]’}
+../src/util/sha1/sha1.c: In function ‘SHA1Final’:
+../src/util/sha1/sha1.c:55:1: note: in a call to function ‘SHA1Transform’
+   55 | SHA1Transform(uint32_t state[5], const uint8_t buffer[SHA1_BLOCK_LENGTH])
+      | ^~~~~~~~~~~~~
+In function ‘SHA1Update’,
+    inlined from ‘SHA1Pad’ at ../src/util/sha1/sha1.c:159:3,
+    inlined from ‘SHA1Final’ at ../src/util/sha1/sha1.c:168:2:
+../src/util/sha1/sha1.c:135:25: warning: ‘SHA1Transform’ reading 64 bytes from a region of size 1 [-Wstringop-overread]
+  135 |                         SHA1Transform(context->state, (uint8_t *)&data[i]);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/util/sha1/sha1.c:135:25: note: referencing argument 2 of type ‘const uint8_t[64]’ {aka ‘const unsigned char[64]’}
+../src/util/sha1/sha1.c: In function ‘SHA1Final’:
+../src/util/sha1/sha1.c:55:1: note: in a call to function ‘SHA1Transform’
+   55 | SHA1Transform(uint32_t state[5], const uint8_t buffer[SHA1_BLOCK_LENGTH])
+      | ^~~~~~~~~~~~~
+In function ‘SHA1Update’,
+    inlined from ‘SHA1Pad’ at ../src/util/sha1/sha1.c:160:2,
+    inlined from ‘SHA1Final’ at ../src/util/sha1/sha1.c:168:2:
+../src/util/sha1/sha1.c:135:25: warning: ‘SHA1Transform’ reading 64 bytes from a region of size 8 [-Wstringop-overread]
+  135 |                         SHA1Transform(context->state, (uint8_t *)&data[i]);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/util/sha1/sha1.c:135:25: note: referencing argument 2 of type ‘const uint8_t[64]’ {aka ‘const unsigned char[64]’}
+../src/util/sha1/sha1.c: In function ‘SHA1Final’:
+../src/util/sha1/sha1.c:55:1: note: in a call to function ‘SHA1Transform’
+   55 | SHA1Transform(uint32_t state[5], const uint8_t buffer[SHA1_BLOCK_LENGTH])
+      | ^~~~~~~~~~~~~
+[41/1425] Compiling C object src/util/libmesa_util.a.p/simple_mtx.c.o
+[42/1425] Compiling C object src/util/libmesa_util.a.p/slab.c.o
+[43/1425] Compiling C object src/util/libmesa_util.a.p/set.c.o
+[44/1425] Compiling C object src/util/libmesa_util.a.p/string_buffer.c.o
+[45/1425] Compiling C object src/util/libmesa_util.a.p/rb_tree.c.o
+[46/1425] Compiling C object src/util/libmesa_util.a.p/hash_table.c.o
+[47/1425] Compiling C object src/util/libmesa_util.a.p/strtod.c.o
+[48/1425] Compiling C object src/util/libmesa_util.a.p/u_atomic.c.o
+[49/1425] Compiling C object src/util/libmesa_util.a.p/perf_u_trace.c.o
+[50/1425] Compiling C object src/util/libmesa_util.a.p/u_call_once.c.o
+[51/1425] Compiling C object src/util/libmesa_util.a.p/u_dl.c.o
+[52/1425] Compiling C object src/util/libmesa_util.a.p/u_dynarray.c.o
+[53/1425] Compiling C object src/util/libmesa_util.a.p/u_hash_table.c.o
+[54/1425] Compiling C object src/util/libmesa_util.a.p/register_allocate.c.o
+[55/1425] Compiling C object src/util/libmesa_util.a.p/rgtc.c.o
+[56/1425] Compiling C object src/util/libmesa_util.a.p/sparse_array.c.o
+[57/1425] Compiling C object src/util/libmesa_util.a.p/u_thread.c.o
+[58/1425] Compiling C object src/util/libmesa_util.a.p/u_queue.c.o
+[59/1425] Compiling C object src/util/libmesa_util.a.p/u_vector.c.o
+[60/1425] Compiling C object src/util/libmesa_util.a.p/softfloat.c.o
+[61/1425] Compiling C object src/util/libmesa_util.a.p/u_math.c.o
+[62/1425] Compiling C object src/util/libmesa_util.a.p/u_mm.c.o
+[63/1425] Compiling C object src/util/libmesa_util.a.p/u_debug_memory.c.o
+[64/1425] Compiling C object src/util/libmesa_util.a.p/u_worklist.c.o
+[65/1425] Compiling C object src/util/libmesa_util.a.p/vl_zscan_data.c.o
+[66/1425] Compiling C object src/util/libmesa_util.a.p/u_printf.c.o
+../src/util/u_printf.c: In function ‘util_printf_next_spec_pos’:
+../src/util/u_printf.c:66:24: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   66 |       char *spec_pos = strpbrk(str_found, "cdieEfFgGaAosuxXp%");
+      |                        ^~~~~~~
+[67/1425] Compiling C object src/util/libmesa_util.a.p/vma.c.o
+[68/1425] Compiling C++ object src/util/libmesa_util.a.p/texcompress_astc_luts_wrap.cpp.o
+[69/1425] Compiling C object src/util/libmesa_util.a.p/u_cpu_detect.c.o
+[70/1425] Compiling C object src/util/libmesa_util.a.p/u_debug.c.o
+[71/1425] Compiling C++ object src/util/libmesa_util.a.p/texcompress_astc_luts.cpp.o
+[72/1425] Compiling C object src/util/libmesa_util.a.p/mesa_cache_db_multipart.c.o
+[73/1425] Compiling C object src/util/libmesa_util.a.p/ralloc.c.o
+[74/1425] Compiling C object src/util/libmesa_util.a.p/format_u_format_latc.c.o
+[75/1425] Compiling C object src/util/libmesa_util.a.p/format_u_format.c.o
+[76/1425] Compiling C object src/util/libmesa_util.a.p/mesa_cache_db.c.o
+[77/1425] Compiling C object src/util/libmesa_util.a.p/format_u_format_etc.c.o
+[78/1425] Compiling C object src/util/libmesa_util.a.p/format_u_format_tests.c.o
+[79/1425] Compiling C object src/util/libmesa_util.a.p/u_debug_stack.c.o
+[80/1425] Compiling C object src/util/libmesa_util.a.p/format_u_format_unpack_neon.c.o
+[81/1425] Linking static target src/c11/impl/libmesa_util_c11.a
+[82/1425] Linking static target src/util/blake3/libblake3.a
+[83/1425] Linking static target src/util/libmesa_util_sse41.a
+[84/1425] Compiling C object src/util/libmesa_util.a.p/u_debug_symbol.c.o
+[85/1425] Compiling C object src/util/libmesa_util.a.p/format_u_format_fxt1.c.o
+[86/1425] Compiling C object src/util/libmesa_util.a.p/format_u_format_rgtc.c.o
+[87/1425] Generating src/git_sha1.h with a custom command
+[88/1425] Compiling C object src/mapi/shared-glapi/libglapi.so.0.0.0.p/glapi.c.o
+[89/1425] Compiling C object src/mapi/shared-glapi/libglapi.so.0.0.0.p/.._u_current.c.o
+[90/1425] Compiling C object src/util/libmesa_util.a.p/format_u_format_zs.c.o
+[91/1425] Compiling C object src/mapi/shared-glapi/libglapi.so.0.0.0.p/table.c.o
+[92/1425] Compiling C object src/mapi/shared-glapi/libglapi.so.0.0.0.p/stub.c.o
+[93/1425] Generating src/compiler/builtin_types.h with a custom command
+[94/1425] Generating src/gallium/auxiliary/tr_util.[ch] with a custom command
+[95/1425] Compiling C object src/util/libmesa_util.a.p/format_u_format_other.c.o
+[96/1425] Compiling C object src/loader/libloader.a.p/loader_dri_helper.c.o
+[97/1425] Compiling C object src/compiler/libcompiler.a.p/meson-generated_.._builtin_types.c.o
+[98/1425] Compiling C object src/compiler/libcompiler.a.p/shader_enums.c.o
+[99/1425] Compiling C object src/loader/libloader.a.p/loader.c.o
+[100/1425] Compiling C object src/compiler/nir/libnir.a.p/meson-generated_.._nir_opcodes.c.o
+[101/1425] Compiling C object src/util/libxmlconfig.a.p/xmlconfig.c.o
+[102/1425] Compiling C object src/compiler/nir/libnir.a.p/meson-generated_.._nir_intrinsics.c.o
+[103/1425] Compiling C object src/util/libmesa_util.a.p/format_u_format_bptc.c.o
+[104/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_builder.c.o
+[105/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_clone.c.o
+[106/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_builtin_builder.c.o
+[107/1425] Compiling C object src/compiler/nir/libnir.a.p/nir.c.o
+[108/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_control_flow.c.o
+[109/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_deref.c.o
+[110/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_dominance.c.o
+[111/1425] Compiling C object src/util/libmesa_util.a.p/format_u_format_yuv.c.o
+[112/1425] Compiling C object src/util/libmesa_util.a.p/format_u_format_s3tc.c.o
+[113/1425] Compiling C object src/compiler/libcompiler.a.p/glsl_types.c.o
+[114/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_divergence_analysis.c.o
+[115/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_functions.c.o
+[116/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_gather_types.c.o
+[117/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_format_convert.c.o
+[118/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_gather_tcs_info.c.o
+[119/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_gather_xfb_info.c.o
+[120/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_group_loads.c.o
+[121/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_gs_count_vertices.c.o
+[122/1425] Compiling C object src/compiler/nir/libnir.a.p/meson-generated_.._nir_opt_algebraic.c.o
+[123/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_legacy.c.o
+[124/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_liveness.c.o
+[125/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_gather_info.c.o
+[126/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_inline_uniforms.c.o
+[127/1425] Compiling C object src/mapi/shared-glapi/libglapi.so.0.0.0.p/.._entry.c.o
+[128/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_from_ssa.c.o
+[129/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_alu.c.o
+[130/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_alpha_test.c.o
+[131/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_amul.c.o
+[132/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_atomics_to_ssbo.c.o
+[133/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_bool_to_bitsize.c.o
+[134/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_instr_set.c.o
+[135/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_bitmap.c.o
+[136/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_bool_to_int32.c.o
+[137/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_blend.c.o
+[138/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_bool_to_float.c.o
+[139/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_clamp_color_outputs.c.o
+[140/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_cl_images.c.o
+[141/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_alu_width.c.o
+[142/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_clip_halfz.c.o
+[143/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_clip_disable.c.o
+[144/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_const_arrays_to_uniforms.c.o
+[145/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_continue_constructs.c.o
+[146/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_linking_helpers.c.o
+[147/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_loop_analyze.c.o
+[148/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_clip.c.o
+[149/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_discard_if.c.o
+[150/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_fb_read.c.o
+[151/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_flatshade.c.o
+[152/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_convert_alu_types.c.o
+[153/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_flrp.c.o
+[154/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_variable_initializers.c.o
+[155/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_fragcoord_wtrans.c.o
+[156/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_frag_coord_to_pixel_coord.c.o
+[157/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_clip_cull_distance_arrays.c.o
+[158/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_fragcolor.c.o
+[159/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_global_vars_to_local.c.o
+[160/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_drawpixels.c.o
+[161/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_frexp.c.o
+[162/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_load_const_to_scalar.c.o
+[163/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_helper_writes.c.o
+[164/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_locals_to_regs.c.o
+[165/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_double_ops.c.o
+[166/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_image.c.o
+[167/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_idiv.c.o
+[168/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_image_atomics_to_global.c.o
+[169/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_array_deref_of_vec.c.o
+[170/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_interpolation.c.o
+[171/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_indirect_derefs.c.o
+[172/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_goto_ifs.c.o
+[173/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_io_arrays_to_elements.c.o
+[174/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_fp16_conv.c.o
+[175/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_input_attachments.c.o
+[176/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_io_to_temporaries.c.o
+[177/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_int_to_float.c.o
+[178/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_int64.c.o
+[179/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_is_helper_invocation.c.o
+[180/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_io_to_vector.c.o
+[181/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_memcpy.c.o
+[182/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_memory_model.c.o
+[183/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_gs_intrinsics.c.o
+../src/compiler/nir/nir_lower_gs_intrinsics.c: In function ‘nir_lower_gs_intrinsics’:
+../src/compiler/nir/nir_lower_gs_intrinsics.c:527:93: warning: ‘state’ may be used uninitialized [-Wmaybe-uninitialized]
+  527 |             state.decomposed_primitive_count_vars[i] = state.decomposed_primitive_count_vars[0];
+      |                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+../src/compiler/nir/nir_lower_gs_intrinsics.c:468:17: note: ‘state’ declared here
+  468 |    struct state state;
+      |                 ^~~~~
+[184/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_multiview.c.o
+[185/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_mediump.c.o
+[186/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_packing.c.o
+[187/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_passthrough_edgeflags.c.o
+[188/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_patch_vertices.c.o
+[189/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_phis_to_scalar.c.o
+[190/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_io_to_scalar.c.o
+[191/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_non_uniform_access.c.o
+[192/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_poly_line_smooth.c.o
+[193/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_point_size_mov.c.o
+[194/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_point_size.c.o
+[195/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_pntc_ytransform.c.o
+[196/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_reg_intrinsics_to_ssa.c.o
+[197/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_printf.c.o
+[198/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_readonly_images_to_tex.c.o
+[199/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_point_smooth.c.o
+[200/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_mem_access_bit_sizes.c.o
+[201/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_samplers.c.o
+[202/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_robust_access.c.o
+[203/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_returns.c.o
+[204/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_single_sampled.c.o
+[205/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_terminate_to_demote.c.o
+[206/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_ssbo.c.o
+[207/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_scratch.c.o
+[208/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_task_shader.c.o
+[209/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_tess_coord_z.c.o
+[210/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_tex_shadow.c.o
+[211/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_texcoord_replace.c.o
+[212/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_two_sided_color.c.o
+[213/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_texcoord_replace_late.c.o
+[214/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_system_values.c.o
+[215/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_undef_to_zero.c.o
+[216/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_vec_to_regs.c.o
+[217/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_vars_to_ssa.c.o
+[218/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_var_copies.c.o
+[219/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_view_index_to_device_index.c.o
+[220/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_vec3_to_vec4.c.o
+[221/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_wpos_center.c.o
+[222/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_viewport_transform.c.o
+[223/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_wpos_ytransform.c.o
+[224/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_bit_size.c.o
+[225/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_uniforms_to_ubo.c.o
+[226/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_metadata.c.o
+[227/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_subgroups.c.o
+[228/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_sysvals_to_varyings.c.o
+[229/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_tex.c.o
+[230/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_mod_analysis.c.o
+[231/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_wrmasks.c.o
+[232/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_move_vec_src_uses_to_dest.c.o
+[233/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_io.c.o
+[234/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_access.c.o
+[235/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_comparison_pre.c.o
+[236/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_barriers.c.o
+[237/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_normalize_cubemap_coords.c.o
+[238/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_conditional_discard.c.o
+[239/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_cse.c.o
+[240/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_ubo_vec4.c.o
+[241/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_copy_propagate.c.o
+[242/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_combine_stores.c.o
+[243/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_dead_write_vars.c.o
+[244/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_frag_coord_to_pixel_coord.c.o
+[245/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_fragdepth.c.o
+[246/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_dce.c.o
+[247/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_find_array_copies.c.o
+[248/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_dead_cf.c.o
+[249/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_generate_bfi.c.o
+[250/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_shader_calls.c.o
+[251/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_constant_folding.c.o
+[252/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_licm.c.o
+[253/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_intrinsics.c.o
+[254/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_idiv_const.c.o
+[255/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_loop.c.o
+[256/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_if.c.o
+[257/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_loop_unroll.c.o
+[258/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_move.c.o
+[259/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_gcm.c.o
+[260/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_move_discards_to_top.c.o
+[261/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_non_uniform_access.c.o
+[262/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_mqsad.c.o
+[263/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_large_constants.c.o
+[264/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_ray_queries.c.o
+[265/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_copy_prop_vars.c.o
+[266/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_preamble.c.o
+[267/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_offsets.c.o
+[268/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_peephole_select.c.o
+[269/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_memcpy.c.o
+[270/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_rematerialize_compares.c.o
+[271/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_reassociate_bfi.c.o
+[272/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_phi_precision.c.o
+[273/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_remove_phis.c.o
+[274/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_shrink_stores.c.o
+[275/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_uniform_atomics.c.o
+[276/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_sink.c.o
+[277/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_undef.c.o
+[278/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_uniform_subgroup.c.o
+[279/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_shrink_vectors.c.o
+../src/compiler/nir/nir_opt_shrink_vectors.c: In function ‘shrink_dest_to_read_mask’:
+../src/compiler/nir/nir_opt_shrink_vectors.c:139:36: warning: writing 16 bytes into a region of size 15 [-Wstringop-overflow=]
+  139 |             swizzle[first_bit + i] = i;
+      |             ~~~~~~~~~~~~~~~~~~~~~~~^~~
+../src/compiler/nir/nir_opt_shrink_vectors.c:137:18: note: at offset [1, 15] into destination object ‘swizzle’ of size 16
+  137 |          uint8_t swizzle[NIR_MAX_VEC_COMPONENTS] = { 0 };
+      |                  ^~~~~~~
+[280/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_phi_builder.c.o
+[281/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_passthrough_gs.c.o
+[282/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_vectorize_io.c.o
+[283/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_passthrough_tcs.c.o
+[284/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_propagate_invariant.c.o
+[285/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_vectorize.c.o
+[286/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_scale_fdiv.c.o
+[287/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_remove_tex_shadow.c.o
+[288/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_repair_ssa.c.o
+[289/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_remove_dead_variables.c.o
+[290/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_load_store_vectorize.c.o
+[291/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_search.c.o
+[292/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_range_analysis.c.o
+[293/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_split_per_member_structs.c.o
+[294/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_sweep.c.o
+[295/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_split_var_copies.c.o
+[296/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_to_lcssa.c.o
+[297/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_split_64bit_vec3_and_vec4.c.o
+[298/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_use_dominance.c.o
+[299/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_validate.c.o
+[300/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_trivialize_registers.c.o
+[301/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_worklist.c.o
+[302/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_lower_atomics.c.o
+[303/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_schedule.c.o
+[304/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_serialize.c.o
+[305/1425] Compiling C object src/compiler/spirv/libvtn.a.p/meson-generated_.._vtn_gather_types.c.o
+[306/1425] Compiling C object src/compiler/spirv/libvtn.a.p/vtn_amd.c.o
+[307/1425] Compiling C object src/compiler/spirv/libvtn.a.p/gl_spirv.c.o
+[308/1425] Compiling C object src/compiler/spirv/libvtn.a.p/vtn_cmat.c.o
+[309/1425] Compiling C object src/compiler/spirv/libvtn.a.p/meson-generated_.._spirv_info.c.o
+[310/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_split_vars.c.o
+[311/1425] Compiling C object src/compiler/spirv/libvtn.a.p/vtn_alu.c.o
+[312/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_opt_varyings.c.o
+[313/1425] Compiling C object src/compiler/spirv/libvtn.a.p/vtn_debug.c.o
+[314/1425] Compiling C object src/compiler/spirv/libvtn.a.p/vtn_subgroup.c.o
+[315/1425] Compiling C object src/compiler/spirv/libvtn.a.p/vtn_structured_cfg.c.o
+[316/1425] Compiling C object src/compiler/spirv/libvtn.a.p/vtn_cfg.c.o
+[317/1425] Compiling C object src/compiler/spirv/libvtn.a.p/vtn_opencl.c.o
+[318/1425] Compiling C object src/compiler/spirv/libvtn.a.p/vtn_glsl450.c.o
+[319/1425] Compiling C object src/compiler/nir/libnir.a.p/nir_print.c.o
+[320/1425] Compiling C object src/compiler/glsl/glcpp/libglcpp.a.p/pp.c.o
+[321/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/ast_expr.cpp.o
+[322/1425] Compiling C object src/compiler/glsl/glcpp/libglcpp.a.p/meson-generated_.._glcpp-lex.c.o
+[323/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/ast_array_index.cpp.o
+[324/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/ast_type.cpp.o
+[325/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/ast_function.cpp.o
+[326/1425] Compiling C object src/compiler/glsl/glcpp/libglcpp.a.p/meson-generated_.._glcpp-parse.c.o
+[327/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/builtin_types.cpp.o
+[328/1425] Compiling C object src/compiler/spirv/libvtn.a.p/vtn_variables.c.o
+[329/1425] Compiling C object src/compiler/glsl/libglsl.a.p/gl_nir_lower_atomics.c.o
+[330/1425] Compiling C object src/compiler/glsl/libglsl.a.p/gl_nir_lower_images.c.o
+[331/1425] Compiling C object src/compiler/glsl/libglsl.a.p/gl_nir_detect_function_recursion.c.o
+[332/1425] Compiling C object src/compiler/glsl/libglsl.a.p/gl_nir_lower_buffers.c.o
+[333/1425] Compiling C object src/compiler/glsl/libglsl.a.p/gl_nir_lower_discard_flow.c.o
+[334/1425] Compiling C object src/compiler/glsl/libglsl.a.p/gl_nir_lower_named_interface_blocks.c.o
+[335/1425] Compiling C object src/compiler/glsl/libglsl.a.p/gl_nir_lower_blend_equation_advanced.c.o
+[336/1425] Compiling C object src/compiler/glsl/libglsl.a.p/gl_nir_lower_samplers.c.o
+[337/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/builtin_variables.cpp.o
+[338/1425] Compiling C object src/compiler/glsl/libglsl.a.p/gl_nir_lower_packed_varyings.c.o
+[339/1425] Compiling C object src/compiler/glsl/libglsl.a.p/gl_nir_lower_xfb_varying.c.o
+[340/1425] Compiling C object src/compiler/glsl/libglsl.a.p/gl_nir_lower_samplers_as_deref.c.o
+[341/1425] Compiling C object src/compiler/glsl/libglsl.a.p/gl_nir_link_atomics.c.o
+[342/1425] Compiling C object src/compiler/glsl/libglsl.a.p/gl_nir_link_functions.c.o
+[343/1425] Compiling C object src/compiler/glsl/libglsl.a.p/gl_nir_link_interface_blocks.c.o
+[344/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/meson-generated_.._glsl_parser.cpp.o
+[345/1425] Compiling C object src/compiler/glsl/libglsl.a.p/gl_nir_link_uniform_initializers.c.o
+[346/1425] Compiling C object src/compiler/glsl/libglsl.a.p/gl_nir_link_xfb.c.o
+[347/1425] Compiling C object src/compiler/glsl/libglsl.a.p/gl_nir_link_uniforms.c.o
+[348/1425] Compiling C object src/compiler/glsl/libglsl.a.p/gl_nir_link_uniform_blocks.c.o
+[349/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/ast_to_hir.cpp.o
+[350/1425] Compiling C object src/compiler/glsl/libglsl.a.p/gl_nir_opt_dead_builtin_varyings.c.o
+[351/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/glsl_symbol_table.cpp.o
+[352/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/hir_field_selection.cpp.o
+[353/1425] Compiling C object src/compiler/spirv/libvtn.a.p/spirv_to_nir.c.o
+[354/1425] Compiling C object src/compiler/glsl/libglsl.a.p/gl_nir_link_varyings.c.o
+[355/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/ir_basic_block.cpp.o
+[356/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/ir_array_refcount.cpp.o
+[357/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/ir_builder.cpp.o
+[358/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/ir_clone.cpp.o
+[359/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/ir_equals.cpp.o
+[360/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/ir_expression_flattening.cpp.o
+[361/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/ir_function_detect_recursion.cpp.o
+[362/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/ir.cpp.o
+[363/1425] Compiling C object src/compiler/glsl/libglsl.a.p/gl_nir_linker.c.o
+[364/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/ir_function.cpp.o
+[365/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/ir_hierarchical_visitor.cpp.o
+[366/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/glsl_parser_extras.cpp.o
+[367/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/ir_hv_accept.cpp.o
+[368/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/ir_rvalue_visitor.cpp.o
+[369/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/glsl_to_nir.cpp.o
+[370/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/ir_variable_refcount.cpp.o
+[371/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/ir_validate.cpp.o
+[372/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/lower_builtins.cpp.o
+[373/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/ir_print_visitor.cpp.o
+[374/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/ir_reader.cpp.o
+[375/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/linker_util.cpp.o
+[376/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/lower_jumps.cpp.o
+[377/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/lower_mat_op_to_vec.cpp.o
+[378/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/lower_subroutine.cpp.o
+[379/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/lower_packing_builtins.cpp.o
+[380/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/lower_instructions.cpp.o
+[381/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/lower_vec_index_to_cond_assign.cpp.o
+[382/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/opt_algebraic.cpp.o
+[383/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/opt_dead_code.cpp.o
+[384/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/lower_vector_derefs.cpp.o
+[385/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/opt_flatten_nested_if_blocks.cpp.o
+[386/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/opt_dead_code_local.cpp.o
+[387/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/opt_dead_builtin_variables.cpp.o
+[388/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/opt_if_simplification.cpp.o
+[389/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/opt_flip_matrices.cpp.o
+[390/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/opt_function_inlining.cpp.o
+[391/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/lower_precision.cpp.o
+[392/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/propagate_invariance.cpp.o
+[393/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/string_to_uint_map.cpp.o
+[394/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/opt_tree_grafting.cpp.o
+[395/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/s_expression.cpp.o
+[396/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/opt_minmax.cpp.o
+[397/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/opt_rebalance_tree.cpp.o
+[398/1425] Compiling C object src/compiler/isaspec/libisaspec.a.p/isaspec.c.o
+[399/1425] Compiling C object src/vulkan/util/libvulkan_util.a.p/meson-generated_.._vk_extensions.c.o
+[400/1425] Compiling C object src/vulkan/util/libvulkan_util.a.p/vk_alloc.c.o
+[401/1425] Compiling C object src/vulkan/util/libvulkan_util.a.p/vk_format.c.o
+[402/1425] Compiling C object src/vulkan/util/libvulkan_util.a.p/vk_util.c.o
+[403/1425] Compiling C object src/virtio/vdrm/liblibvdrm.a.p/vdrm.c.o
+[404/1425] Compiling C object src/virtio/vdrm/liblibvdrm.a.p/vdrm_virtgpu.c.o
+[405/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/shader_cache.cpp.o
+[406/1425] Compiling C object src/freedreno/common/libfreedreno_common.a.p/freedreno_rd_output.c.o
+[407/1425] Compiling C object src/freedreno/common/libfreedreno_common.a.p/freedreno_dev_info.c.o
+[408/1425] Compiling C object src/freedreno/common/libfreedreno_common.a.p/freedreno_uuid.c.o
+[409/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/serialize.cpp.o
+[410/1425] Compiling C object src/freedreno/ir2/libfreedreno_ir2.a.p/disasm-a2xx.c.o
+[411/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/meson-generated_.._ir3_nir_trig.c.o
+[412/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/meson-generated_.._glsl_lexer.cpp.o
+[413/1425] Compiling C object src/vulkan/util/libvulkan_util.a.p/meson-generated_.._vk_dispatch_table.c.o
+[414/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/meson-generated_.._ir3_nir_branch_and_or_not.c.o
+[415/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/meson-generated_.._ir3_nir_imul.c.o
+[416/1425] Compiling C object src/freedreno/isa/libir3decode.a.p/meson-generated_.._ir3-isa.c.o
+[417/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/disasm-a3xx.c.o
+[418/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/meson-generated_.._ir3_lexer.c.o
+[419/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/meson-generated_.._ir3_parser.c.o
+[420/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_a4xx.c.o
+[421/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_array_to_ssa.c.o
+[422/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_assembler.c.o
+[423/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3.c.o
+[424/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/meson-generated_.._.._isa_ir3-isa.c.o
+[425/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_a6xx.c.o
+[426/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_compiler.c.o
+[427/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_context.c.o
+[428/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_cf.c.o
+[429/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_cse.c.o
+[430/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_cp.c.o
+[431/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_dce.c.o
+[432/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_dominance.c.o
+[433/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_delay.c.o
+[434/1425] Compiling C object src/vulkan/util/libvulkan_util.a.p/meson-generated_.._vk_enum_to_str.c.o
+[435/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_legalize_relative.c.o
+[436/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_disk_cache.c.o
+[437/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_image.c.o
+[438/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_liveness.c.o
+[439/1425] Compiling C object src/compiler/nir/libnir.a.p/meson-generated_.._nir_constant_expressions.c.o
+[440/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_lower_shared_phi.c.o
+[441/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_lower_spill.c.o
+[442/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_lower_parallelcopy.c.o
+[443/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_merge_regs.c.o
+[444/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_lower_subgroups.c.o
+[445/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_nir_lower_driver_params_to_ubo.c.o
+[446/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_nir_lower_load_barycentric_at_sample.c.o
+[447/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_nir_lower_64b.c.o
+[448/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_nir.c.o
+[449/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_nir_lower_load_barycentric_at_offset.c.o
+[450/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_nir_lower_push_consts_to_preamble.c.o
+[451/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_nir_analyze_ubo_ranges.c.o
+[452/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_nir_lower_io_offsets.c.o
+[453/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_nir_lower_layer_id.c.o
+[454/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_nir_move_varying_inputs.c.o
+[455/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_nir_lower_tex_prefetch.c.o
+[456/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_legalize.c.o
+[457/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_opt_predicates.c.o
+[458/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_print.c.o
+[459/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_nir_opt_preamble.c.o
+[460/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_ra_validate.c.o
+[461/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_ra_predicates.c.o
+[462/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_postsched.c.o
+[463/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_remove_unreachable.c.o
+[464/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_reconvergence.c.o
+[465/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_nir_lower_tess.c.o
+[466/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_shared_folding.c.o
+[467/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_rpt.c.o
+[468/1425] Compiling C object src/freedreno/isa/libir3encode.a.p/encode.c.o
+[469/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_validate.c.o
+[470/1425] Compiling C object src/freedreno/fdl/libfreedreno_layout.a.p/fd5_layout.c.o
+[471/1425] Compiling C object src/freedreno/fdl/libfreedreno_layout.a.p/fd6_format_table.c.o
+[472/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_sched.c.o
+[473/1425] Compiling C object src/freedreno/fdl/libfreedreno_layout.a.p/fd6_layout.c.o
+[474/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_shader.c.o
+[475/1425] Compiling C object src/freedreno/fdl/libfreedreno_layout.a.p/freedreno_layout.c.o
+[476/1425] Compiling C object src/freedreno/fdl/libfreedreno_layout.a.p/fd6_view.c.o
+[477/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_shared_ra.c.o
+[478/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_ra.c.o
+[479/1425] Compiling C object src/freedreno/drm/libfreedreno_drm.a.p/freedreno_bo_heap.c.o
+[480/1425] Compiling C object src/freedreno/drm/libfreedreno_drm.a.p/freedreno_bo.c.o
+[481/1425] Compiling C object src/freedreno/drm/libfreedreno_drm.a.p/freedreno_device.c.o
+[482/1425] Compiling C object src/freedreno/drm/libfreedreno_drm.a.p/freedreno_ringbuffer.c.o
+[483/1425] Compiling C object src/freedreno/drm/libfreedreno_drm.a.p/freedreno_bo_cache.c.o
+[484/1425] Compiling C object src/freedreno/drm/libfreedreno_drm.a.p/freedreno_pipe.c.o
+[485/1425] Compiling C object src/freedreno/drm/libfreedreno_drm.a.p/msm_msm_bo.c.o
+[486/1425] Compiling C object src/freedreno/drm/libfreedreno_drm.a.p/msm_msm_device.c.o
+[487/1425] Compiling C object src/freedreno/drm/libfreedreno_drm.a.p/msm_msm_ringbuffer_sp.c.o
+[488/1425] Compiling C object src/freedreno/drm/libfreedreno_drm.a.p/msm_msm_pipe.c.o
+[489/1425] Compiling C object src/freedreno/drm/libfreedreno_drm.a.p/kgsl_kgsl_device.c.o
+[490/1425] Compiling C object src/freedreno/drm/libfreedreno_drm.a.p/freedreno_ringbuffer_sp.c.o
+[491/1425] Compiling C object src/freedreno/drm/libfreedreno_drm.a.p/kgsl_kgsl_pipe.c.o
+[492/1425] Compiling C object src/freedreno/drm/libfreedreno_drm.a.p/kgsl_kgsl_bo.c.o
+[493/1425] Compiling C object src/freedreno/drm/libfreedreno_drm.a.p/msm_msm_ringbuffer.c.o
+[494/1425] Compiling C object src/freedreno/perfcntrs/libfreedreno_perfcntrs.a.p/fd2_perfcntr.c.o
+[495/1425] Compiling C object src/freedreno/perfcntrs/libfreedreno_perfcntrs.a.p/fd5_perfcntr.c.o
+[496/1425] Compiling C object src/freedreno/drm/libfreedreno_drm.a.p/kgsl_kgsl_ringbuffer_sp.c.o
+[497/1425] Compiling C object src/freedreno/perfcntrs/libfreedreno_perfcntrs.a.p/freedreno_perfcntr.c.o
+[498/1425] Compiling C object src/freedreno/perfcntrs/libfreedreno_perfcntrs.a.p/freedreno_dt.c.o
+[499/1425] Compiling C object src/freedreno/perfcntrs/libfreedreno_perfcntrs.a.p/fd7_perfcntr.c.o
+[500/1425] Compiling C object src/freedreno/perfcntrs/libfreedreno_perfcntrs.a.p/fd6_perfcntr.c.o
+[501/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_spill.c.o
+[502/1425] Compiling C object src/mesa/libmesa.a.p/meson-generated_.._format_fallback.c.o
+[503/1425] Compiling C object src/mesa/libmesa.a.p/meson-generated_.._.._mapi_glapi_gen_enums.c.o
+src/mapi/glapi/gen/enums.c: In function ‘_mesa_enum_to_string’:
+src/mapi/glapi/gen/enums.c:7777:8: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 7777 |    elt = bsearch(& nr, enum_string_table_offsets,
+      |        ^
+[504/1425] Compiling C object src/mesa/libmesa.a.p/meson-generated_.._.._mapi_glapi_gen_unmarshal_table.c.o
+[505/1425] Compiling C object src/freedreno/ir3/libfreedreno_ir3.a.p/ir3_compiler_nir.c.o
+[506/1425] Compiling C object src/util/libmesa_util.a.p/meson-generated_.._format_u_format_table.c.o
+[507/1425] Compiling C object src/mesa/libmesa.a.p/meson-generated_.._program_program_parse.tab.c.o
+[508/1425] Linking static target src/util/libmesa_util.a
+[509/1425] Linking target src/mapi/shared-glapi/libglapi.so.0.0.0
+[510/1425] Compiling C object src/mesa/libmesa.a.p/meson-generated_.._program_lex.yy.c.o
+[511/1425] Compiling C++ object src/freedreno/fdl/libfreedreno_layout.a.p/fd6_tiled_memcpy.cc.o
+[512/1425] Compiling C object src/mesa/libmesa.a.p/meson-generated_.._.._mapi_glapi_gen_marshal_generated1.c.o
+[513/1425] Compiling C object src/mesa/libmesa.a.p/meson-generated_.._.._mapi_glapi_gen_marshal_generated0.c.o
+[514/1425] Compiling C object src/mesa/libmesa.a.p/main_accum.c.o
+[515/1425] Compiling C object src/mesa/libmesa.a.p/main_api_arrayelt.c.o
+[516/1425] Compiling C object src/mesa/libmesa.a.p/meson-generated_.._.._mapi_glapi_gen_marshal_generated2.c.o
+[517/1425] Compiling C object src/mesa/libmesa.a.p/main_arrayobj.c.o
+[518/1425] Compiling C object src/mesa/libmesa.a.p/main_arbprogram.c.o
+[519/1425] Compiling C object src/mesa/libmesa.a.p/meson-generated_.._.._mapi_glapi_gen_marshal_generated4.c.o
+[520/1425] Compiling C object src/mesa/libmesa.a.p/main_atifragshader.c.o
+[521/1425] Compiling C object src/mesa/libmesa.a.p/main_barrier.c.o
+[522/1425] Compiling C object src/mesa/libmesa.a.p/main_bbox.c.o
+[523/1425] Compiling C object src/mesa/libmesa.a.p/meson-generated_.._.._mapi_glapi_gen_marshal_generated3.c.o
+[524/1425] Compiling C object src/mesa/libmesa.a.p/main_blit.c.o
+[525/1425] Compiling C object src/mesa/libmesa.a.p/meson-generated_.._.._mapi_glapi_gen_marshal_generated5.c.o
+[526/1425] Compiling C object src/mesa/libmesa.a.p/main_attrib.c.o
+[527/1425] Compiling C object src/mesa/libmesa.a.p/meson-generated_.._.._mapi_glapi_gen_marshal_generated7.c.o
+[528/1425] Compiling C object src/mesa/libmesa.a.p/main_blend.c.o
+[529/1425] Compiling C object src/mesa/libmesa.a.p/main_clip.c.o
+[530/1425] Compiling C object src/mesa/libmesa.a.p/meson-generated_.._.._mapi_glapi_gen_marshal_generated6.c.o
+[531/1425] Compiling C object src/mesa/libmesa.a.p/main_compute.c.o
+[532/1425] Compiling C object src/mesa/libmesa.a.p/main_condrender.c.o
+[533/1425] Compiling C object src/mesa/libmesa.a.p/main_clear.c.o
+[534/1425] Compiling C object src/mesa/libmesa.a.p/main_conservativeraster.c.o
+[535/1425] Compiling C object src/mesa/libmesa.a.p/main_depth.c.o
+[536/1425] Compiling C object src/mesa/libmesa.a.p/main_copyimage.c.o
+[537/1425] Compiling C object src/mesa/libmesa.a.p/main_debug.c.o
+[538/1425] Compiling C object src/mesa/libmesa.a.p/main_context.c.o
+[539/1425] Compiling C object src/mesa/libmesa.a.p/main_draw_validate.c.o
+[540/1425] Compiling C object src/mesa/libmesa.a.p/main_drawpix.c.o
+[541/1425] Compiling C object src/mesa/libmesa.a.p/main_drawtex.c.o
+[542/1425] Compiling C object src/mesa/libmesa.a.p/main_debug_output.c.o
+[543/1425] Compiling C object src/mesa/libmesa.a.p/main_errors.c.o
+[544/1425] Compiling C object src/mesa/libmesa.a.p/main_buffers.c.o
+[545/1425] Compiling C object src/mesa/libmesa.a.p/main_es1_conversion.c.o
+[546/1425] Compiling C object src/mesa/libmesa.a.p/main_extensions.c.o
+[547/1425] Compiling C object src/mesa/libmesa.a.p/meson-generated_.._.._mapi_glapi_gen_api_exec_init.c.o
+[548/1425] Compiling C object src/mesa/libmesa.a.p/main_extensions_table.c.o
+[549/1425] Compiling C object src/mesa/libmesa.a.p/main_eval.c.o
+[550/1425] Compiling C object src/mesa/libmesa.a.p/main_externalobjects.c.o
+[551/1425] Compiling C object src/mesa/libmesa.a.p/main_draw.c.o
+[552/1425] Compiling C object src/mesa/libmesa.a.p/main_feedback.c.o
+[553/1425] Compiling C object src/mesa/libmesa.a.p/main_enable.c.o
+[554/1425] Compiling C object src/mesa/libmesa.a.p/main_fog.c.o
+[555/1425] Compiling C object src/mesa/libmesa.a.p/main_formatquery.c.o
+[556/1425] Compiling C object src/mesa/libmesa.a.p/main_formats.c.o
+[557/1425] Compiling C object src/mesa/libmesa.a.p/main_ff_fragment_shader.c.o
+[558/1425] Compiling C object src/mesa/libmesa.a.p/main_genmipmap.c.o
+[559/1425] Compiling C object src/mesa/libmesa.a.p/main_getstring.c.o
+[560/1425] Compiling C object src/mesa/libmesa.a.p/main_framebuffer.c.o
+[561/1425] Compiling C object src/mesa/libmesa.a.p/main_glspirv.c.o
+[562/1425] Compiling C object src/mesa/libmesa.a.p/main_glthread.c.o
+[563/1425] Compiling C object src/mesa/libmesa.a.p/main_ffvertex_prog.c.o
+[564/1425] Compiling C object src/mesa/libmesa.a.p/main_get.c.o
+[565/1425] Compiling C object src/mesa/libmesa.a.p/main_glthread_bufferobj.c.o
+[566/1425] Compiling C object src/mesa/libmesa.a.p/main_bufferobj.c.o
+[567/1425] Compiling C object src/mesa/libmesa.a.p/main_glthread_get.c.o
+[568/1425] Compiling C object src/mesa/libmesa.a.p/main_glthread_list.c.o
+[569/1425] Compiling C object src/mesa/libmesa.a.p/main_glthread_pixels.c.o
+[570/1425] Compiling C object src/mesa/libmesa.a.p/main_glthread_shaderobj.c.o
+[571/1425] Compiling C object src/mesa/libmesa.a.p/main_glthread_draw_unroll.c.o
+[572/1425] Compiling C object src/mesa/libmesa.a.p/main_hash.c.o
+[573/1425] Compiling C object src/mesa/libmesa.a.p/main_hint.c.o
+[574/1425] Compiling C object src/mesa/libmesa.a.p/main_glformats.c.o
+[575/1425] Compiling C object src/mesa/libmesa.a.p/main_image.c.o
+[576/1425] Compiling C object src/mesa/libmesa.a.p/main_lines.c.o
+[577/1425] Compiling C object src/mesa/libmesa.a.p/main_glthread_varray.c.o
+[578/1425] Compiling C object src/mesa/libmesa.a.p/main_multisample.c.o
+[579/1425] Compiling C object src/mesa/libmesa.a.p/main_mipmap.c.o
+[580/1425] Compiling C object src/mesa/libmesa.a.p/main_objectlabel.c.o
+[581/1425] Compiling C object src/mesa/libmesa.a.p/main_fbobject.c.o
+[582/1425] Compiling C object src/mesa/libmesa.a.p/main_matrix.c.o
+[583/1425] Compiling C object src/mesa/libmesa.a.p/main_light.c.o
+[584/1425] Compiling C object src/mesa/libmesa.a.p/main_pbo.c.o
+[585/1425] Compiling C object src/mesa/libmesa.a.p/main_performance_query.c.o
+[586/1425] Compiling C object src/mesa/libmesa.a.p/main_pipelineobj.c.o
+[587/1425] Compiling C object src/mesa/libmesa.a.p/main_pixel.c.o
+[588/1425] Compiling C object src/mesa/libmesa.a.p/main_pixelstore.c.o
+[589/1425] Compiling C object src/mesa/libmesa.a.p/main_performance_monitor.c.o
+[590/1425] Compiling C object src/mesa/libmesa.a.p/main_pixeltransfer.c.o
+[591/1425] Compiling C object src/mesa/libmesa.a.p/main_polygon.c.o
+[592/1425] Compiling C object src/mesa/libmesa.a.p/main_program_binary.c.o
+[593/1425] Compiling C object src/mesa/libmesa.a.p/main_points.c.o
+[594/1425] Compiling C object src/mesa/libmesa.a.p/main_querymatrix.c.o
+[595/1425] Compiling C object src/mesa/libmesa.a.p/main_program_resource.c.o
+[596/1425] Compiling C object src/mesa/libmesa.a.p/main_remap.c.o
+[597/1425] Compiling C object src/mesa/libmesa.a.p/main_rastpos.c.o
+[598/1425] Compiling C object src/mesa/libmesa.a.p/main_queryobj.c.o
+[599/1425] Compiling C object src/mesa/libmesa.a.p/main_pack.c.o
+[600/1425] Compiling C object src/mesa/libmesa.a.p/main_renderbuffer.c.o
+[601/1425] Compiling C object src/mesa/libmesa.a.p/main_readpix.c.o
+[602/1425] Compiling C object src/mesa/libmesa.a.p/main_scissor.c.o
+[603/1425] Compiling C object src/mesa/libmesa.a.p/main_robustness.c.o
+[604/1425] Compiling C object src/mesa/libmesa.a.p/main_shaderobj.c.o
+[605/1425] Compiling C object src/mesa/libmesa.a.p/main_shaderimage.c.o
+[606/1425] Compiling C object src/mesa/libmesa.a.p/main_shared.c.o
+[607/1425] Compiling C object src/mesa/libmesa.a.p/main_spirv_extensions.c.o
+[608/1425] Compiling C object src/mesa/libmesa.a.p/main_spirv_capabilities.c.o
+[609/1425] Compiling C++ object src/mesa/libmesa.a.p/main_shader_query.cpp.o
+[610/1425] Compiling C object src/mesa/libmesa.a.p/main_samplerobj.c.o
+[611/1425] Compiling C object src/mesa/libmesa.a.p/main_syncobj.c.o
+[612/1425] Compiling C object src/mesa/libmesa.a.p/main_stencil.c.o
+[613/1425] Compiling C object src/mesa/libmesa.a.p/main_state.c.o
+[614/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/ir_constant_expression.cpp.o
+[615/1425] Compiling C object src/mesa/libmesa.a.p/main_texcompress.c.o
+[616/1425] Compiling C object src/mesa/libmesa.a.p/main_shaderapi.c.o
+[617/1425] Compiling C object src/mesa/libmesa.a.p/main_texcompress_cpal.c.o
+[618/1425] Compiling C object src/mesa/libmesa.a.p/main_texcompress_fxt1.c.o
+[619/1425] Compiling C object src/mesa/libmesa.a.p/main_texcompress_rgtc.c.o
+[620/1425] Compiling C object src/mesa/libmesa.a.p/main_glthread_draw.c.o
+[621/1425] Compiling C object src/mesa/libmesa.a.p/main_texenv.c.o
+[622/1425] Compiling C object src/mesa/libmesa.a.p/main_texgen.c.o
+[623/1425] Compiling C object src/mesa/libmesa.a.p/main_texgetimage.c.o
+[624/1425] Compiling C++ object src/mesa/libmesa.a.p/main_texcompress_astc.cpp.o
+[625/1425] Compiling C object src/mesa/libmesa.a.p/main_texcompress_s3tc.c.o
+[626/1425] Compiling C object src/mesa/libmesa.a.p/main_texcompress_bptc.c.o
+[627/1425] Compiling C object src/mesa/libmesa.a.p/main_texcompress_etc.c.o
+[628/1425] Compiling C object src/mesa/libmesa.a.p/main_texstate.c.o
+[629/1425] Compiling C object src/mesa/libmesa.a.p/main_texobj.c.o
+[630/1425] Compiling C object src/mesa/libmesa.a.p/main_texstorage.c.o
+[631/1425] Compiling C object src/mesa/libmesa.a.p/main_textureview.c.o
+[632/1425] Compiling C object src/mesa/libmesa.a.p/main_texstore.c.o
+[633/1425] Compiling C object src/mesa/libmesa.a.p/main_texturebindless.c.o
+[634/1425] Compiling C object src/mesa/libmesa.a.p/main_vdpau.c.o
+[635/1425] Compiling C object src/mesa/libmesa.a.p/main_version.c.o
+[636/1425] Compiling C object src/mesa/libmesa.a.p/main_transformfeedback.c.o
+[637/1425] Compiling C object src/mesa/libmesa.a.p/math_m_eval.c.o
+[638/1425] Compiling C object src/mesa/libmesa.a.p/main_uniforms.c.o
+[639/1425] Compiling C object src/mesa/libmesa.a.p/main_viewport.c.o
+[640/1425] Compiling C object src/mesa/libmesa.a.p/program_prog_cache.c.o
+[641/1425] Compiling C object src/mesa/libmesa.a.p/program_arbprogparse.c.o
+[642/1425] Compiling C object src/mesa/libmesa.a.p/main_texparam.c.o
+[643/1425] Compiling C object src/mesa/libmesa.a.p/program_prog_instruction.c.o
+[644/1425] Compiling C object src/mesa/libmesa.a.p/math_m_matrix.c.o
+[645/1425] Compiling C object src/mesa/libmesa.a.p/program_prog_parameter.c.o
+[646/1425] Compiling C object src/mesa/libmesa.a.p/program_prog_parameter_layout.c.o
+[647/1425] Compiling C object src/mesa/libmesa.a.p/program_prog_print.c.o
+[648/1425] Compiling C++ object src/mesa/libmesa.a.p/main_uniform_query.cpp.o
+[649/1425] Compiling C object src/mesa/libmesa.a.p/program_program.c.o
+[650/1425] Compiling C object src/mesa/libmesa.a.p/program_program_parse_extra.c.o
+[651/1425] Compiling C object src/mesa/libmesa.a.p/program_symbol_table.c.o
+[652/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_atom_atomicbuf.c.o
+[653/1425] Compiling C object src/mesa/libmesa.a.p/program_prog_to_nir.c.o
+[654/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_atom_blend.c.o
+[655/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_atom_clip.c.o
+[656/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_atom_depth.c.o
+[657/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_atifs_to_nir.c.o
+[658/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_atom_constbuf.c.o
+[659/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_atom_framebuffer.c.o
+[660/1425] Compiling C object src/mesa/libmesa.a.p/program_prog_statevars.c.o
+[661/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_atom_msaa.c.o
+[662/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_atom_image.c.o
+[663/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_atom_pixeltransfer.c.o
+[664/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_atom_rasterizer.c.o
+[665/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_atom_sampler.c.o
+[666/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_atom_scissor.c.o
+[667/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_atom_stipple.c.o
+[668/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_atom_storagebuf.c.o
+[669/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_atom_tess.c.o
+[670/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_atom_texture.c.o
+[671/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_atom_shader.c.o
+[672/1425] Compiling C object src/mesa/libmesa.a.p/main_varray.c.o
+[673/1425] Compiling C object src/mesa/libmesa.a.p/main_teximage.c.o
+[674/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_atom_viewport.c.o
+[675/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_cb_bitmap.c.o
+[676/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_cb_clear.c.o
+[677/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_cb_eglimage.c.o
+[678/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_cb_flush.c.o
+[679/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_cb_drawtex.c.o
+[680/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_cb_copyimage.c.o
+[681/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_cb_feedback.c.o
+[682/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_cb_rasterpos.c.o
+[683/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_copytex.c.o
+[684/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_debug.c.o
+[685/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_cb_readpixels.c.o
+[686/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_context.c.o
+[687/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_draw.c.o
+[688/1425] Compiling C++ object src/mesa/libmesa.a.p/state_tracker_st_atom_array.cpp.o
+[689/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_gen_mipmap.c.o
+[690/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_format.c.o
+[691/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_draw_feedback.c.o
+[692/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_extensions.c.o
+[693/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_interop.c.o
+[694/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_cb_drawpixels.c.o
+[695/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_nir_builtins.c.o
+[696/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_nir_lower_builtin.c.o
+[697/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_manager.c.o
+[698/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_cb_texture.c.o
+[699/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_nir_lower_position_invariant.c.o
+[700/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_nir_lower_tex_src_plane.c.o
+[701/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_nir_lower_fog.c.o
+[702/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_sampler_view.c.o
+[703/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_scissor.c.o
+[704/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_pbo.c.o
+[705/1425] Compiling C++ object src/mesa/libmesa.a.p/state_tracker_st_glsl_to_nir.cpp.o
+[706/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_vdpau.c.o
+[707/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_shader_cache.c.o
+[708/1425] Compiling C object src/mesa/libmesa.a.p/vbo_vbo_context.c.o
+[709/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_texture.c.o
+[710/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_texcompress_compute.c.o
+[711/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_program.c.o
+[712/1425] Compiling C object src/mesa/libmesa.a.p/vbo_vbo_exec.c.o
+[713/1425] Compiling C object src/mesa/libmesa.a.p/vbo_vbo_minmax_index.c.o
+[714/1425] Compiling C object src/mesa/libmesa.a.p/vbo_vbo_exec_draw.c.o
+[715/1425] Compiling C object src/mesa/libmesa.a.p/vbo_vbo_exec_eval.c.o
+[716/1425] Compiling C object src/mesa/libmesa.a.p/vbo_vbo_save.c.o
+[717/1425] Compiling C object src/mesa/libmesa.a.p/vbo_vbo_save_draw.c.o
+[718/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/meson-generated_.._tr_util.c.o
+[719/1425] Compiling C object src/mesa/libmesa.a.p/vbo_vbo_save_loopback.c.o
+[720/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/meson-generated_.._u_tracepoints.c.o
+[721/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_draw_hw_select.c.o
+[722/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/cso_cache_cso_cache.c.o
+[723/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/cso_cache_cso_context.c.o
+[724/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/cso_cache_cso_hash.c.o
+[725/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/meson-generated_.._u_unfilled_gen.c.o
+[726/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_fs.c.o
+[727/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_context.c.o
+[728/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_mesh.c.o
+[729/1425] Compiling C object src/mesa/libmesa.a.p/state_tracker_st_pbo_compute.c.o
+[730/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_mesh_prim.c.o
+[731/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pipe_aaline.c.o
+[732/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pipe_aapoint.c.o
+[733/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_gs.c.o
+[734/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pipe_cull.c.o
+[735/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pipe.c.o
+[736/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pipe_flatshade.c.o
+[737/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pipe_offset.c.o
+[738/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pipe_clip.c.o
+[739/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pipe_pstipple.c.o
+[740/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pipe_stipple.c.o
+[741/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pipe_twoside.c.o
+[742/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pipe_user_cull.c.o
+[743/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pipe_unfilled.c.o
+[744/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pipe_util.c.o
+[745/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pipe_wide_line.c.o
+[746/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pipe_vbuf.c.o
+[747/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pipe_validate.c.o
+[748/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pipe_wide_point.c.o
+[749/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pt_emit.c.o
+[750/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pt.c.o
+[751/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pt_fetch.c.o
+[752/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_prim_assembler.c.o
+[753/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pt_mesh_pipeline.c.o
+[754/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pt_fetch_shade_emit.c.o
+[755/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pt_fetch_shade_pipeline.c.o
+[756/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pt_util.c.o
+[757/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pt_so_emit.c.o
+[758/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pt_post_vs.c.o
+[759/1425] Compiling C object src/mesa/libmesa.a.p/vbo_vbo_noop.c.o
+[760/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_tess.c.o
+[761/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_vertex.c.o
+[762/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_vs_exec.c.o
+[763/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_vs.c.o
+[764/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_vs_variant.c.o
+[765/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/driver_ddebug_dd_screen.c.o
+[766/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/driver_ddebug_dd_context.c.o
+[767/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pt_vsplit.c.o
+[768/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/driver_noop_noop_state.c.o
+[769/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/driver_noop_noop_pipe.c.o
+[770/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/driver_ddebug_dd_draw.c.o
+[771/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/driver_trace_tr_dump.c.o
+[772/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/driver_trace_tr_texture.c.o
+[773/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/driver_trace_tr_screen.c.o
+[774/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/driver_trace_tr_dump_state.c.o
+[775/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/hud_font.c.o
+[776/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/driver_trace_tr_video.c.o
+[777/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/hud_hud_nic.c.o
+[778/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/hud_hud_cpufreq.c.o
+[779/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/hud_hud_diskstat.c.o
+[780/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/hud_hud_cpu.c.o
+[781/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/hud_hud_sensors_temp.c.o
+[782/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/hud_hud_fps.c.o
+[783/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/driver_trace_tr_context.c.o
+[784/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/hud_hud_driver_query.c.o
+[785/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/indices_u_primconvert.c.o
+[786/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/pipebuffer_pb_bufmgr_cache.c.o
+[787/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/pipebuffer_pb_bufmgr_debug.c.o
+[788/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/pipebuffer_pb_buffer_fenced.c.o
+[789/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/hud_hud_context.c.o
+[790/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/pipebuffer_pb_bufmgr_mm.c.o
+[791/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/pipebuffer_pb_bufmgr_slab.c.o
+[792/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/pipebuffer_pb_validate.c.o
+[793/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/postprocess_pp_celshade.c.o
+[794/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/pipebuffer_pb_cache.c.o
+[795/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/pipebuffer_pb_slab.c.o
+[796/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/postprocess_pp_colors.c.o
+[797/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/postprocess_pp_init.c.o
+[798/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/postprocess_pp_program.c.o
+[799/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/postprocess_pp_mlaa.c.o
+[800/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/rtasm_rtasm_execmem.c.o
+[801/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/rtasm_rtasm_x86sse.c.o
+[802/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/tgsi_tgsi_aa_point.c.o
+[803/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/postprocess_pp_run.c.o
+[804/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/tgsi_tgsi_build.c.o
+[805/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/tgsi_tgsi_dynamic_indexing.c.o
+[806/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/tgsi_tgsi_from_mesa.c.o
+[807/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/tgsi_tgsi_iterate.c.o
+[808/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/tgsi_tgsi_info.c.o
+[809/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/tgsi_tgsi_parse.c.o
+[810/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/tgsi_tgsi_dump.c.o
+[811/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/tgsi_tgsi_sanity.c.o
+[812/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/tgsi_tgsi_point_sprite.c.o
+[813/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/tgsi_tgsi_strings.c.o
+[814/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/tgsi_tgsi_scan.c.o
+[815/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/tgsi_tgsi_transform.c.o
+[816/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/tgsi_tgsi_two_side.c.o
+[817/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/tgsi_tgsi_lowering.c.o
+[818/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/tgsi_tgsi_util.c.o
+[819/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/tgsi_tgsi_vpos.c.o
+[820/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/translate_translate.c.o
+[821/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/translate_translate_cache.c.o
+[822/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/translate_translate_generic.c.o
+[823/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/translate_translate_sse.c.o
+[824/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/tgsi_tgsi_text.c.o
+[825/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_async_debug.c.o
+[826/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_bitmask.c.o
+[827/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_cache.c.o
+[828/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/tgsi_tgsi_exec.c.o
+[829/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_compute.c.o
+[830/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_debug_flush.c.o
+[831/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/tgsi_tgsi_ureg.c.o
+[832/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_debug_describe.c.o
+[833/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_debug_image.c.o
+[834/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_debug_refcnt.c.o
+[835/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_driconf.c.o
+[836/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_draw.c.o
+[837/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_draw_quad.c.o
+[838/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_dump_defines.c.o
+[839/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_gen_mipmap.c.o
+[840/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_handle_table.c.o
+[841/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_framebuffer.c.o
+[842/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_index_modify.c.o
+[843/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_dump_state.c.o
+[844/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_helpers.c.o
+[845/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_live_shader_cache.c.o
+[846/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_prim.c.o
+[847/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_blitter.c.o
+[848/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_log.c.o
+[849/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_sample_positions.c.o
+[850/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_pstipple.c.o
+[851/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_prim_restart.c.o
+[852/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_resource.c.o
+[853/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_sampler.c.o
+[854/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_screen.c.o
+[855/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_split_draw.c.o
+[856/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_suballoc.c.o
+[857/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_texture.c.o
+[858/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_surface.c.o
+[859/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_tile.c.o
+[860/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_transfer.c.o
+[861/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_tests.c.o
+[862/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_transfer_helper.c.o
+[863/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_trace_gallium.c.o
+[864/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_upload_mgr.c.o
+[865/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_vertex_state_cache.c.o
+[866/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_vbuf.c.o
+[867/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/nir_tgsi_to_nir.c.o
+[868/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/nir_nir_draw_helpers.c.o
+[869/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_simple_shaders.c.o
+[870/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/renderonly_renderonly.c.o
+[871/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_arit_overflow.c.o
+[872/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_assert.c.o
+[873/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/util_u_threaded_context.c.o
+[874/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_bitarit.c.o
+[875/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_const.c.o
+[876/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_coro.c.o
+[877/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_conv.c.o
+[878/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_flow.c.o
+[879/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_format_aos_array.c.o
+[880/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_format_aos.c.o
+[881/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_arit.c.o
+[882/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_format_float.c.o
+[883/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_format.c.o
+[884/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/nir_nir_to_tgsi.c.o
+[885/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_format_soa.c.o
+[886/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_format_srgb.c.o
+[887/1425] Compiling C++ object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_debug.cpp.o
+[888/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_format_yuv.c.o
+[889/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_init_common.c.o
+[890/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_gather.c.o
+[891/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_intr.c.o
+[892/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_format_s3tc.c.o
+[893/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_ir_common.c.o
+[894/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_logic.c.o
+[895/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_jit_types.c.o
+[896/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_jit_sample.c.o
+[897/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_nir_aos.c.o
+[898/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_pack.c.o
+[899/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_passmgr.c.o
+[900/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_printf.c.o
+[901/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_quad.c.o
+[902/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_sample_aos.c.o
+[903/1425] Compiling C++ object src/compiler/glsl/libglsl.a.p/builtin_functions.cpp.o
+[904/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_sample.c.o
+[905/1425] Compiling C object src/mesa/libmesa.a.p/vbo_vbo_save_api.c.o
+[906/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_nir.c.o
+[907/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_struct.c.o
+[908/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_nir_soa.c.o
+[909/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_tgsi.c.o
+[910/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_swizzle.c.o
+[911/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_type.c.o
+[912/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_tgsi_info.c.o
+[913/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_pt_fetch_shade_pipeline_llvm.c.o
+[914/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_vs_llvm.c.o
+[915/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_tgsi_action.c.o
+[916/1425] Compiling C++ object src/gallium/auxiliary/libgallium.a.p/tessellator_p_tessellator.cpp.o
+[917/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/meson-generated_.._u_indices_gen.c.o
+[918/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_init.c.o
+[919/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/nir_nir_to_tgsi_info.c.o
+[920/1425] Compiling C object src/gallium/auxiliary/libgalliumvl.a.p/vl_vl_codec.c.o
+[921/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_tgsi_soa.c.o
+[922/1425] Compiling C object src/gallium/auxiliary/libgalliumvl.a.p/vl_vl_compositor.c.o
+[923/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/draw_draw_llvm.c.o
+[924/1425] Compiling C object src/gallium/auxiliary/libgalliumvl.a.p/vl_vl_csc.c.o
+[925/1425] Compiling C object src/gallium/auxiliary/libgalliumvl.a.p/vl_vl_decoder.c.o
+[926/1425] Compiling C object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_sample_soa.c.o
+[927/1425] Compiling C++ object src/gallium/auxiliary/libgallium.a.p/gallivm_lp_bld_misc.cpp.o
+[928/1425] Compiling C object src/gallium/auxiliary/libgalliumvl.a.p/vl_vl_bicubic_filter.c.o
+[929/1425] Compiling C object src/gallium/auxiliary/libgalliumvl.a.p/vl_vl_matrix_filter.c.o
+[930/1425] Compiling C object src/gallium/auxiliary/libgalliumvl.a.p/vl_vl_compositor_gfx.c.o
+[931/1425] Compiling C object src/gallium/auxiliary/libgalliumvl.a.p/vl_vl_median_filter.c.o
+[932/1425] Compiling C++ object src/gallium/auxiliary/libgallium.a.p/tessellator_tessellator.cpp.o
+[933/1425] Compiling C object src/gallium/auxiliary/libgalliumvl.a.p/vl_vl_vertex_buffers.c.o
+[934/1425] Compiling C object src/gallium/auxiliary/libgalliumvl.a.p/vl_vl_idct.c.o
+[935/1425] Compiling C object src/gallium/auxiliary/libgalliumvl.a.p/vl_vl_mc.c.o
+[936/1425] Compiling C object src/gallium/auxiliary/pipe-loader/libpipe_loader_static.a.p/pipe_loader.c.o
+[937/1425] Compiling C object src/gallium/auxiliary/libgalliumvl.a.p/vl_vl_video_buffer.c.o
+[938/1425] Compiling C object src/gallium/auxiliary/pipe-loader/libpipe_loader_static.a.p/pipe_loader_sw.c.o
+[939/1425] Compiling C object src/gallium/winsys/sw/null/libws_null.a.p/null_sw_winsys.c.o
+[940/1425] Compiling C object src/gallium/auxiliary/pipe-loader/libpipe_loader_static.a.p/pipe_loader_drm.c.o
+[941/1425] Compiling C object src/gallium/auxiliary/libgalliumvl.a.p/vl_vl_mpeg12_decoder.c.o
+[942/1425] Compiling C object src/gallium/winsys/sw/dri/libswdri.a.p/dri_sw_winsys.c.o
+[943/1425] Compiling C object src/gallium/winsys/sw/wrapper/libwsw.a.p/wrapper_sw_winsys.c.o
+[944/1425] Compiling C object src/gallium/winsys/sw/kms-dri/libswkmsdri.a.p/kms_dri_sw_winsys.c.o
+[945/1425] Compiling C object src/gallium/winsys/freedreno/drm/libfreedrenowinsys.a.p/freedreno_drm_winsys.c.o
+[946/1425] Compiling C object src/gallium/auxiliary/libgalliumvl.a.p/vl_vl_zscan.c.o
+[947/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/freedreno_autotune.c.o
+[948/1425] Compiling C object src/gallium/auxiliary/libgalliumvl.a.p/vl_vl_deint_filter.c.o
+[949/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/meson-generated_.._freedreno_tracepoints.c.o
+[950/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/freedreno_batch.c.o
+[951/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/freedreno_blitter.c.o
+[952/1425] Compiling C object src/gallium/auxiliary/libgalliumvl.a.p/vl_vl_compositor_cs.c.o
+[953/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/freedreno_batch_cache.c.o
+[954/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/freedreno_context.c.o
+[955/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/freedreno_fence.c.o
+[956/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/freedreno_program.c.o
+[957/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/freedreno_query.c.o
+[958/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/freedreno_draw.c.o
+[959/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/freedreno_query_sw.c.o
+[960/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/freedreno_query_acc.c.o
+[961/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/freedreno_gmem.c.o
+[962/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/freedreno_query_hw.c.o
+[963/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/freedreno_surface.c.o
+[964/1425] Compiling C object src/gallium/auxiliary/libgalliumvl.a.p/vl_vl_mpeg12_bitstream.c.o
+[965/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a2xx_fd2_blend.c.o
+[966/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/freedreno_util.c.o
+[967/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a2xx_fd2_context.c.o
+[968/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/freedreno_texture.c.o
+[969/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/freedreno_screen.c.o
+[970/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a2xx_fd2_query.c.o
+[971/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a2xx_fd2_emit.c.o
+[972/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a2xx_fd2_program.c.o
+[973/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a2xx_fd2_rasterizer.c.o
+[974/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/freedreno_state.c.o
+[975/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a2xx_fd2_resource.c.o
+[976/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a2xx_fd2_gmem.c.o
+[977/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a2xx_fd2_draw.c.o
+[978/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a2xx_fd2_screen.c.o
+[979/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a2xx_fd2_zsa.c.o
+[980/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a2xx_fd2_util.c.o
+[981/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/freedreno_resource.c.o
+[982/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a2xx_fd2_texture.c.o
+[983/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a2xx_ir2_cp.c.o
+[984/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a2xx_ir2_ra.c.o
+[985/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a3xx_fd3_context.c.o
+[986/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a3xx_fd3_blend.c.o
+[987/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a2xx_ir2.c.o
+[988/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a3xx_fd3_format.c.o
+[989/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a3xx_fd3_draw.c.o
+[990/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a3xx_fd3_query.c.o
+[991/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a2xx_ir2_assemble.c.o
+[992/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a3xx_fd3_resource.c.o
+[993/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a3xx_fd3_rasterizer.c.o
+[994/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a3xx_fd3_screen.c.o
+[995/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a3xx_fd3_zsa.c.o
+[996/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a3xx_fd3_texture.c.o
+[997/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a4xx_fd4_blend.c.o
+[998/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a4xx_fd4_compute.c.o
+[999/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a4xx_fd4_context.c.o
+[1000/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a2xx_ir2_nir.c.o
+[1001/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a3xx_fd3_emit.c.o
+[1002/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a4xx_fd4_format.c.o
+[1003/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a3xx_fd3_gmem.c.o
+[1004/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a3xx_fd3_program.c.o
+[1005/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a4xx_fd4_draw.c.o
+[1006/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a4xx_fd4_image.c.o
+[1007/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a4xx_fd4_rasterizer.c.o
+[1008/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a4xx_fd4_query.c.o
+[1009/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a4xx_fd4_resource.c.o
+[1010/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a4xx_fd4_screen.c.o
+[1011/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a4xx_fd4_zsa.c.o
+[1012/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a5xx_fd5_blend.c.o
+[1013/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a4xx_fd4_gmem.c.o
+[1014/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a4xx_fd4_texture.c.o
+[1015/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a5xx_fd5_context.c.o
+[1016/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a5xx_fd5_format.c.o
+[1017/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a5xx_fd5_compute.c.o
+[1018/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a4xx_fd4_emit.c.o
+[1019/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a5xx_fd5_draw.c.o
+[1020/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a5xx_fd5_blitter.c.o
+[1021/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a5xx_fd5_image.c.o
+[1022/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a5xx_fd5_query.c.o
+[1023/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a5xx_fd5_rasterizer.c.o
+[1024/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a5xx_fd5_resource.c.o
+[1025/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a5xx_fd5_screen.c.o
+[1026/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a5xx_fd5_zsa.c.o
+[1027/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a5xx_fd5_gmem.c.o
+[1028/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a4xx_fd4_program.c.o
+[1029/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a5xx_fd5_texture.c.o
+[1030/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a5xx_fd5_emit.c.o
+[1031/1425] Compiling C++ object src/gallium/drivers/freedreno/libfreedreno.a.p/a6xx_fd6_barrier.cc.o
+[1032/1425] Compiling C++ object src/gallium/drivers/freedreno/libfreedreno.a.p/a6xx_fd6_context.cc.o
+[1033/1425] Compiling C++ object src/gallium/drivers/freedreno/libfreedreno.a.p/a6xx_fd6_blend.cc.o
+[1034/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/a5xx_fd5_program.c.o
+[1035/1425] Compiling C++ object src/gallium/drivers/freedreno/libfreedreno.a.p/a6xx_fd6_compute.cc.o
+[1036/1425] Compiling C++ object src/gallium/drivers/freedreno/libfreedreno.a.p/a6xx_fd6_const.cc.o
+[1037/1425] Compiling C++ object src/gallium/drivers/freedreno/libfreedreno.a.p/a6xx_fd6_blitter.cc.o
+[1038/1425] Compiling C++ object src/gallium/drivers/freedreno/libfreedreno.a.p/a6xx_fd6_image.cc.o
+[1039/1425] Compiling C object src/mesa/libmesa.a.p/main_dlist.c.o
+[1040/1425] Compiling C++ object src/gallium/drivers/freedreno/libfreedreno.a.p/a6xx_fd6_query.cc.o
+[1041/1425] Compiling C++ object src/gallium/drivers/freedreno/libfreedreno.a.p/a6xx_fd6_resource.cc.o
+[1042/1425] Compiling C++ object src/gallium/drivers/freedreno/libfreedreno.a.p/a6xx_fd6_vsc.cc.o
+[1043/1425] Compiling C++ object src/gallium/drivers/freedreno/libfreedreno.a.p/a6xx_fd6_screen.cc.o
+[1044/1425] Compiling C++ object src/gallium/drivers/freedreno/libfreedreno.a.p/a6xx_fd6_draw.cc.o
+[1045/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/ir3_ir3_cache.c.o
+[1046/1425] Compiling C++ object src/gallium/drivers/freedreno/libfreedreno.a.p/a6xx_fd6_emit.cc.o
+[1047/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/ir3_ir3_descriptor.c.o
+[1048/1425] Compiling C object src/gallium/winsys/kmsro/drm/libkmsrowinsys.a.p/kmsro_drm_winsys.c.o
+[1049/1425] Compiling C object src/gallium/drivers/freedreno/libfreedreno.a.p/ir3_ir3_gallium.c.o
+[1050/1425] Compiling C++ object src/gallium/drivers/freedreno/libfreedreno.a.p/a6xx_fd6_texture.cc.o
+[1051/1425] Compiling C++ object src/gallium/drivers/freedreno/libfreedreno.a.p/a6xx_fd6_rasterizer.cc.o
+[1052/1425] Compiling C object src/gallium/drivers/zink/libzink.a.p/meson-generated_.._zink_instance.c.o
+[1053/1425] Compiling C object src/gallium/drivers/zink/libzink.a.p/meson-generated_.._zink_nir_algebraic.c.o
+[1054/1425] Compiling C object src/gallium/drivers/zink/libzink.a.p/zink_lower_cubemap_to_array.c.o
+[1055/1425] Compiling C++ object src/gallium/drivers/freedreno/libfreedreno.a.p/a6xx_fd6_zsa.cc.o
+[1056/1425] Compiling C object src/gallium/drivers/zink/libzink.a.p/meson-generated_.._zink_device_info.c.o
+[1057/1425] Compiling C object src/gallium/drivers/zink/libzink.a.p/zink_blit.c.o
+[1058/1425] Compiling C object src/gallium/drivers/zink/libzink.a.p/meson-generated_.._.._.._.._vulkan_util_vk_dispatch_table.c.o
+[1059/1425] Compiling C object src/gallium/drivers/zink/libzink.a.p/zink_batch.c.o
+[1060/1425] Compiling C object src/mesa/libmesa.a.p/main_format_utils.c.o
+[1061/1425] Compiling C object src/mesa/libmesa.a.p/vbo_vbo_exec_api.c.o
+[1062/1425] Compiling C object src/gallium/drivers/zink/libzink.a.p/nir_to_spirv_spirv_builder.c.o
+[1063/1425] Compiling C object src/gallium/drivers/zink/libzink.a.p/zink_bo.c.o
+[1064/1425] Compiling C object src/gallium/drivers/zink/libzink.a.p/zink_clear.c.o
+[1065/1425] Compiling C object src/gallium/drivers/zink/libzink.a.p/zink_kopper.c.o
+[1066/1425] Compiling C object src/gallium/drivers/zink/libzink.a.p/zink_fence.c.o
+[1067/1425] Compiling C object src/gallium/drivers/zink/libzink.a.p/zink_format.c.o
+[1068/1425] Compiling C object src/gallium/drivers/zink/libzink.a.p/zink_framebuffer.c.o
+[1069/1425] Compiling C++ object src/gallium/drivers/freedreno/libfreedreno.a.p/a6xx_fd6_gmem.cc.o
+[1070/1425] Compiling C object src/gallium/drivers/zink/libzink.a.p/zink_pipeline.c.o
+[1071/1425] Compiling C object src/gallium/drivers/zink/libzink.a.p/nir_to_spirv_nir_to_spirv.c.o
+[1072/1425] Compiling C object src/gallium/drivers/zink/libzink.a.p/zink_render_pass.c.o
+[1073/1425] Compiling C object src/gallium/drivers/zink/libzink.a.p/zink_query.c.o
+[1074/1425] Compiling C++ object src/gallium/drivers/freedreno/libfreedreno.a.p/a6xx_fd6_program.cc.o
+[1075/1425] Compiling C object src/gallium/drivers/zink/libzink.a.p/zink_descriptors.c.o
+[1076/1425] Compiling C object src/gallium/frontends/dri/libdri.a.p/dri_context.c.o
+[1077/1425] Compiling C object src/gallium/drivers/zink/libzink.a.p/zink_surface.c.o
+[1078/1425] Compiling C object src/gallium/frontends/dri/libdri.a.p/dri_drawable.c.o
+[1079/1425] Compiling C object src/gallium/drivers/zink/libzink.a.p/zink_state.c.o
+[1080/1425] Compiling C object src/gallium/frontends/dri/libdri.a.p/dri_query_renderer.c.o
+[1081/1425] Compiling C object src/gallium/frontends/dri/libdri.a.p/dri_helpers.c.o
+[1082/1425] Compiling C object src/gallium/frontends/dri/libdri.a.p/dri_util.c.o
+[1083/1425] Compiling C object src/gallium/frontends/dri/libdri.a.p/dri_screen.c.o
+[1084/1425] Compiling C object src/gallium/frontends/dri/libdri.a.p/drisw.c.o
+[1085/1425] Compiling C++ object src/gallium/drivers/zink/libzink.a.p/zink_synchronization.cpp.o
+[1086/1425] Linking static target src/util/libxmlconfig.a
+[1087/1425] Linking static target src/loader/libloader.a
+[1088/1425] Compiling C object src/gallium/frontends/dri/libdri.a.p/loader_dri3_helper.c.o
+[1089/1425] Compiling C object src/gallium/frontends/dri/libdri.a.p/kopper.c.o
+[1090/1425] Compiling C object src/gallium/frontends/dri/libdri.a.p/dri2.c.o
+[1091/1425] Generating src/mapi/glapi/gen/glapi_mapi_tmp.h with a custom command (wrapped by meson to capture output)
+[1092/1425] Compiling C object src/gallium/drivers/zink/libzink.a.p/zink_screen.c.o
+[1093/1425] Generating src/mapi/glapi/gen/indirect.c with a custom command (wrapped by meson to capture output)
+[1094/1425] Compiling C object src/gallium/drivers/zink/libzink.a.p/zink_resource.c.o
+[1095/1425] Linking static target src/compiler/libcompiler.a
+[1096/1425] Linking static target src/compiler/nir/libnir.a
+[1097/1425] Linking static target src/compiler/spirv/libvtn.a
+[1098/1425] Linking static target src/compiler/glsl/glcpp/libglcpp.a
+[1099/1425] Linking static target src/compiler/glsl/libglsl.a
+[1100/1425] Linking static target src/compiler/isaspec/libisaspec.a
+[1101/1425] Generating src/egl/wayland/wayland-drm/wayland-drm-protocol.c with a custom command
+[1102/1425] Generating src/egl/wayland/wayland-drm/wayland-drm-server-protocol.h with a custom command
+[1103/1425] Generating src/egl/wayland/wayland-drm/fifo-v1-protocol.c with a custom command
+[1104/1425] Generating src/egl/wayland/wayland-drm/fifo-v1-client-protocol.h with a custom command
+[1105/1425] Generating src/egl/wayland/wayland-drm/commit-timing-v1-protocol.c with a custom command
+[1106/1425] Generating src/egl/wayland/wayland-drm/commit-timing-v1-client-protocol.h with a custom command
+[1107/1425] Generating src/egl/wayland/wayland-drm/linux-dmabuf-unstable-v1-protocol.c with a custom command
+[1108/1425] Generating src/egl/wayland/wayland-drm/linux-dmabuf-unstable-v1-client-protocol.h with a custom command
+[1109/1425] Generating src/egl/wayland/wayland-drm/presentation-time-protocol.c with a custom command
+[1110/1425] Generating src/egl/wayland/wayland-drm/presentation-time-client-protocol.h with a custom command
+[1111/1425] Generating src/egl/wayland/wayland-drm/tearing-control-v1-protocol.c with a custom command
+[1112/1425] Generating src/egl/wayland/wayland-drm/tearing-control-v1-client-protocol.h with a custom command
+[1113/1425] Generating src/egl/wayland/wayland-drm/linux-drm-syncobj-v1-protocol.c with a custom command
+[1114/1425] Generating src/egl/wayland/wayland-drm/linux-drm-syncobj-v1-client-protocol.h with a custom command
+[1115/1425] Generating symbol file src/mapi/shared-glapi/libglapi.so.0.0.0.p/libglapi.so.0.0.0.symbols
+[1116/1425] Linking static target src/vulkan/util/libvulkan_util.a
+[1117/1425] Generating src/mapi/glapi/gen/indirect_size.h with a custom command (wrapped by meson to capture output)
+[1118/1425] Generating src/vulkan/runtime/vk_common_entrypoints with a custom command
+[1119/1425] Compiling C object src/gallium/drivers/zink/libzink.a.p/zink_program.c.o
+[1120/1425] Generating src/vulkan/runtime/vk_cmd_queue with a custom command
+[1121/1425] Generating src/mapi/glapi/gen/indirect.h with a custom command (wrapped by meson to capture output)
+[1122/1425] Generating src/vulkan/runtime/vk_physical_device_properties with a custom command
+[1123/1425] Generating src/vulkan/runtime/vk_physical_device_spirv_caps with a custom command
+[1124/1425] Generating src/vulkan/runtime/vk_synchronization_helpers with a custom command
+[1125/1425] Generating src/vulkan/runtime/vk_dispatch_trampolines with a custom command
+[1126/1425] Generating src/vulkan/runtime/vk_physical_device_features with a custom command
+[1127/1425] Generating src/vulkan/runtime/vk_cmd_enqueue_entrypoints with a custom command
+[1128/1425] Linking static target src/virtio/vdrm/liblibvdrm.a
+[1129/1425] Linking static target src/freedreno/common/libfreedreno_common.a
+[1130/1425] Linking static target src/freedreno/isa/libir3decode.a
+[1131/1425] Linking static target src/freedreno/isa/libir3encode.a
+[1132/1425] Linking static target src/freedreno/ir2/libfreedreno_ir2.a
+[1133/1425] Linking static target src/freedreno/ir3/libfreedreno_ir3.a
+[1134/1425] Generating src/vulkan/runtime/astc_spv.h with a custom command
+[1135/1425] Linking static target src/freedreno/fdl/libfreedreno_layout.a
+[1136/1425] Linking static target src/freedreno/drm/libfreedreno_drm.a
+[1137/1425] Linking static target src/freedreno/perfcntrs/libfreedreno_perfcntrs.a
+[1138/1425] Linking static target src/gallium/auxiliary/libgalliumvl.a
+[1139/1425] Linking static target src/gallium/auxiliary/pipe-loader/libpipe_loader_static.a
+[1140/1425] Linking static target src/gallium/winsys/sw/null/libws_null.a
+[1141/1425] Linking static target src/mesa/libmesa.a
+[1142/1425] Linking static target src/gallium/winsys/sw/dri/libswdri.a
+[1143/1425] Linking static target src/gallium/winsys/sw/kms-dri/libswkmsdri.a
+[1144/1425] Linking static target src/gallium/winsys/sw/wrapper/libwsw.a
+[1145/1425] Linking static target src/gallium/winsys/freedreno/drm/libfreedrenowinsys.a
+[1146/1425] Linking static target src/gallium/winsys/kmsro/drm/libkmsrowinsys.a
+[1147/1425] Linking static target src/gallium/auxiliary/libgallium.a
+[1148/1425] Linking static target src/gallium/frontends/dri/libdri.a
+[1149/1425] Linking static target src/gallium/drivers/freedreno/libfreedreno.a
+[1150/1425] Compiling C object src/gbm/libgbm.so.1.0.0.p/main_backend.c.o
+[1151/1425] Compiling C object src/gallium/targets/dri/libgallium-24.3.0.so.p/dri_target.c.o
+[1152/1425] Generating src/mapi/glapi/gen/indirect_init.c with a custom command (wrapped by meson to capture output)
+[1153/1425] Compiling C object src/gbm/libgbm.so.1.0.0.p/main_gbm.c.o
+[1154/1425] Generating src/egl/wayland/wayland-drm/wayland-drm-client-protocol.h with a custom command
+[1155/1425] Compiling C object src/loader/libloader_wayland_helper.a.p/loader_wayland_helper.c.o
+FAILED: [code=1] src/loader/libloader_wayland_helper.a.p/loader_wayland_helper.c.o 
+cc -Isrc/loader/libloader_wayland_helper.a.p -Isrc/loader -I../src/loader -Iinclude -I../include -Isrc -I../src -I../src/gallium/include -Isrc/util/format -fvisibility=hidden -fdiagnostics-color=always -DNDEBUG -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -O3 -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS '-DPACKAGE_VERSION="24.3.0"' '-DPACKAGE_BUGREPORT="https://gitlab.freedesktop.org/mesa/mesa/-/issues"' -DHAVE_OPENGL=1 -DHAVE_OPENGL_ES_1=1 -DHAVE_OPENGL_ES_2=1 -DHAVE_ZINK -DHAVE_FREEDRENO -DHAVE_FREEDRENO_KGSL -DVK_ENABLE_BETA_EXTENSIONS -DVIDEO_CODEC_VC1DEC=0 -DVIDEO_CODEC_H264DEC=0 -DVIDEO_CODEC_H264ENC=0 -DVIDEO_CODEC_H265DEC=0 -DVIDEO_CODEC_H265ENC=0 -DVIDEO_CODEC_AV1DEC=1 -DVIDEO_CODEC_AV1ENC=1 -DVIDEO_CODEC_VP9DEC=1 -DHAVE_X11_PLATFORM -DHAVE_WAYLAND_PLATFORM -DHAVE_SURFACELESS_PLATFORM -DHAVE_DRM_PLATFORM -DHAVE_XCB_PLATFORM -DUSE_LIBGLVND=1 -DGLX_INDIRECT_RENDERING -DGLX_DIRECT_RENDERING -DGLX_USE_DRM -DGLAPI_EXPORT_PROTO_ENTRY_POINTS=0 -DALLOW_KCMP -DMESA_DEBUG=0 -DENABLE_SHADER_CACHE -DHAVE___BUILTIN_BSWAP32 -DHAVE___BUILTIN_BSWAP64 -DHAVE___BUILTIN_CLZ -DHAVE___BUILTIN_CLZLL -DHAVE___BUILTIN_CTZ -DHAVE___BUILTIN_EXPECT -DHAVE___BUILTIN_FFS -DHAVE___BUILTIN_FFSLL -DHAVE___BUILTIN_POPCOUNT -DHAVE___BUILTIN_POPCOUNTLL -DHAVE___BUILTIN_UNREACHABLE -DHAVE___BUILTIN_TYPES_COMPATIBLE_P -DHAVE_FUNC_ATTRIBUTE_CONST -DHAVE_FUNC_ATTRIBUTE_FLATTEN -DHAVE_FUNC_ATTRIBUTE_MALLOC -DHAVE_FUNC_ATTRIBUTE_PURE -DHAVE_FUNC_ATTRIBUTE_UNUSED -DHAVE_FUNC_ATTRIBUTE_WARN_UNUSED_RESULT -DHAVE_FUNC_ATTRIBUTE_WEAK -DHAVE_FUNC_ATTRIBUTE_FORMAT -DHAVE_FUNC_ATTRIBUTE_PACKED -DHAVE_FUNC_ATTRIBUTE_RETURNS_NONNULL -DHAVE_FUNC_ATTRIBUTE_ALIAS -DHAVE_FUNC_ATTRIBUTE_NORETURN -DHAVE_FUNC_ATTRIBUTE_OPTIMIZE -DHAVE_FUNC_ATTRIBUTE_VISIBILITY -DHAVE_UINT128 -DHAVE_REALLOCARRAY -DHAVE_FMEMOPEN -D_GNU_SOURCE -DUSE_GCC_ATOMIC_BUILTINS -DUSE_AARCH64_ASM -DMAJOR_IN_SYSMACROS -DHAS_SCHED_H -DHAS_SCHED_GETAFFINITY -DHAVE_LINUX_FUTEX_H -DHAVE_ENDIAN_H -DHAVE_DLFCN_H -DHAVE_SYS_SHM_H -DHAVE_SYS_INOTIFY_H -DHAVE_LINUX_UDMABUF_H -DHAVE_STRTOF -DHAVE_MKOSTEMP -DHAVE_MEMFD_CREATE -DHAVE_RANDOM_R -DHAVE_FLOCK -DHAVE_STRTOK_R -DHAVE_GETRANDOM -DHAVE_POSIX_FALLOCATE -DHAVE_SECURE_GETENV -DHAVE_GNU_QSORT_R -DHAVE_STRUCT_TIMESPEC -DHAVE_PROGRAM_INVOCATION_NAME -DHAVE_ISSIGNALING -DHAVE_POSIX_MEMALIGN -DHAVE_DIRENT_D_TYPE -DHAVE_STRTOD_L -DHAVE_DLADDR -DHAVE_DL_ITERATE_PHDR -DHAVE_ZLIB -DHAVE_ZSTD -DHAVE_COMPRESSION -DHAVE_PTHREAD -DHAVE_PTHREAD_SETAFFINITY -DHAVE_LIBDRM -DHAVE_LIBUDEV '-DMESA_LLVM_VERSION_STRING="21.1.8"' -DLLVM_IS_SHARED=1 -DLLVM_AVAILABLE=1 -DDRAW_LLVM_AVAILABLE=1 -DAMD_LLVM_AVAILABLE=1 -DGALLIVM_USE_ORCJIT=0 -DHAVE_SPIRV_TOOLS -DUSE_LIBELF -DTHREAD_SANITIZER=0 -DHAVE_LIBUNWIND -DWL_HIDE_DEPRECATED -DHAVE_WL_DISPATCH_QUEUE_TIMEOUT -DHAVE_WL_CREATE_QUEUE_WITH_NAME -DXCB_KEYSYMS_AVAILABLE -DHAVE_X11_DRM -DHAVE_DRI -DHAVE_DRI2 -DHAVE_DRI3_EXPLICIT_SYNC -DHAVE_DRISW_KMS -DHAVE_LIBSENSORS=1 -mtls-dialect=desc -Werror=implicit-function-declaration -Werror=missing-prototypes -Werror=return-type -Werror=empty-body -Werror=incompatible-pointer-types -Werror=int-conversion -Wimplicit-fallthrough -Wmisleading-indentation -Wno-missing-field-initializers -Wno-format-truncation -Wno-nonnull-compare -fno-math-errno -fno-trapping-math -fno-common -Wno-unknown-pragmas -Wno-unused-function -Werror=format -Wformat-security -ffunction-sections -fdata-sections -Wno-unused-variable -Wno-unused-but-set-variable -fPIC -pthread -MD -MQ src/loader/libloader_wayland_helper.a.p/loader_wayland_helper.c.o -MF src/loader/libloader_wayland_helper.a.p/loader_wayland_helper.c.o.d -o src/loader/libloader_wayland_helper.a.p/loader_wayland_helper.c.o -c ../src/loader/loader_wayland_helper.c
+../src/loader/loader_wayland_helper.c: In function ‘loader_wayland_dispatch’:
+../src/loader/loader_wayland_helper.c:161:4: error: implicit declaration of function ‘timespec_sub_saturate’ [-Wimplicit-function-declaration]
+  161 |    timespec_sub_saturate(&remaining_timeout, end_time, &current_time);
+      |    ^~~~~~~~~~~~~~~~~~~~~
+[1156/1425] Compiling C object src/x11/libloader_x11.a.p/loader_x11.c.o
+[1157/1425] Compiling C object src/egl/wayland/wayland-drm/libwayland_drm.a.p/meson-generated_.._wayland-drm-protocol.c.o
+[1158/1425] Generating src/mapi/glapi/gen/indirect_size.c with a custom command (wrapped by meson to capture output)
+[1159/1425] Generating src/vulkan/wsi/wsi_entrypoints with a custom command
+[1160/1425] Generating src/vulkan/runtime/vk_format_info with a custom command
+[1161/1425] Compiling C object src/mapi/glapi/libglapi_bridge.a.p/.._entry.c.o
+[1162/1425] Compiling C object src/gallium/drivers/zink/libzink.a.p/zink_compiler.c.o
+[1163/1425] Compiling C object src/gallium/drivers/zink/libzink.a.p/zink_context.c.o
+[1164/1425] Compiling C++ object src/gallium/drivers/zink/libzink.a.p/zink_draw.cpp.o
+ninja: build stopped: subcommand failed.
+ninja: Entering directory `build/'
+[1/274] Linking static target src/gallium/drivers/zink/libzink.a
+[2/274] Compiling C object src/loader/libloader_wayland_helper.a.p/loader_wayland_helper.c.o
+[3/274] Generating src/git_sha1.h with a custom command
+[4/263] Compiling C object src/egl/wayland/wayland-drm/libwayland_drm.a.p/wayland-drm.c.o
+[5/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/meson-generated_.._vk_common_entrypoints.c.o
+[6/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/meson-generated_.._vk_cmd_enqueue_entrypoints.c.o
+[7/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/meson-generated_.._vk_format_info.c.o
+[8/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_blend.c.o
+[9/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/meson-generated_.._vk_synchronization_helpers.c.o
+[10/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/rmv_vk_rmv_common.c.o
+[11/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/meson-generated_.._vk_physical_device_spirv_caps.c.o
+[12/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_acceleration_structure.c.o
+[13/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_buffer_view.c.o
+[14/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_buffer.c.o
+[15/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_command_buffer.c.o
+[16/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_cmd_copy.c.o
+[17/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_cmd_enqueue.c.o
+[18/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/rmv_vk_rmv_exporter.c.o
+[19/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_debug_report.c.o
+[20/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_command_pool.c.o
+[21/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_descriptors.c.o
+[22/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_deferred_operation.c.o
+[23/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_debug_utils.c.o
+[24/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_descriptor_update_template.c.o
+[25/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_descriptor_set_layout.c.o
+[26/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_device_memory.c.o
+[27/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_device_generated_commands.c.o
+[28/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_device.c.o
+[29/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_framebuffer.c.o
+[30/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_fence.c.o
+[31/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_log.c.o
+[32/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_meta_object_list.c.o
+[33/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_object.c.o
+[34/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_query_pool.c.o
+[35/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_image.c.o
+[36/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/meson-generated_.._vk_dispatch_trampolines.c.o
+[37/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_pipeline_layout.c.o
+[38/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_physical_device.c.o
+[39/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_standard_sample_locations.c.o
+[40/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/meson-generated_.._vk_physical_device_properties.c.o
+[41/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_sync_dummy.c.o
+[42/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_sampler.c.o
+[43/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_semaphore.c.o
+[44/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_sync_binary.c.o
+[45/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_sync.c.o
+[46/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_sync_timeline.c.o
+[47/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_ycbcr_conversion.c.o
+[48/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_drm_syncobj.c.o
+[49/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_synchronization.c.o
+[50/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_queue.c.o
+[51/263] Compiling C object src/vulkan/runtime/libvulkan_runtime.a.p/vk_meta.c.o
+[52/263] Compiling C object src/vulkan/runtime/libvulkan_runtime.a.p/vk_nir.c.o
+[53/263] Compiling C object src/vulkan/runtime/libvulkan_runtime.a.p/vk_meta_clear.c.o
+[54/263] Compiling C object src/vulkan/runtime/libvulkan_runtime.a.p/vk_meta_draw_rects.c.o
+[55/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_render_pass.c.o
+[56/263] Compiling C object src/vulkan/runtime/libvulkan_runtime.a.p/vk_pipeline_cache.c.o
+[57/263] Compiling C object src/vulkan/runtime/libvulkan_runtime.a.p/vk_meta_blit_resolve.c.o
+[58/263] Compiling C object src/vulkan/runtime/libvulkan_runtime.a.p/vk_nir_convert_ycbcr.c.o
+[59/263] Compiling C object src/vulkan/runtime/libvulkan_runtime.a.p/vk_shader_module.c.o
+[60/263] Compiling C object src/vulkan/runtime/libvulkan_runtime.a.p/vk_shader.c.o
+[61/263] Compiling C object src/vulkan/runtime/libvulkan_runtime.a.p/vk_texcompress_astc.c.o
+[62/263] Compiling C object src/vulkan/wsi/libvulkan_wsi.a.p/meson-generated_.._.._.._egl_wayland_wayland-drm_fifo-v1-protocol.c.o
+[63/263] Compiling C object src/vulkan/runtime/libvulkan_instance.a.p/vk_instance.c.o
+[64/263] Compiling C object src/vulkan/wsi/libvulkan_wsi.a.p/meson-generated_.._.._.._egl_wayland_wayland-drm_commit-timing-v1-protocol.c.o
+[65/263] Compiling C object src/vulkan/wsi/libvulkan_wsi.a.p/meson-generated_.._.._.._egl_wayland_wayland-drm_linux-dmabuf-unstable-v1-protocol.c.o
+[66/263] Compiling C object src/vulkan/runtime/libvulkan_runtime.a.p/vk_pipeline.c.o
+[67/263] Compiling C object src/vulkan/wsi/libvulkan_wsi.a.p/meson-generated_.._.._.._egl_wayland_wayland-drm_presentation-time-protocol.c.o
+[68/263] Compiling C object src/vulkan/wsi/libvulkan_wsi.a.p/meson-generated_.._.._.._egl_wayland_wayland-drm_tearing-control-v1-protocol.c.o
+[69/263] Compiling C object src/vulkan/wsi/libvulkan_wsi.a.p/meson-generated_.._.._.._egl_wayland_wayland-drm_linux-drm-syncobj-v1-protocol.c.o
+[70/263] Compiling C object src/vulkan/wsi/libvulkan_wsi.a.p/meson-generated_.._wsi_common_entrypoints.c.o
+[71/263] Compiling C object src/vulkan/wsi/libvulkan_wsi.a.p/wsi_common_drm.c.o
+[72/263] Compiling C object src/vulkan/wsi/libvulkan_wsi.a.p/wsi_common_headless.c.o
+[73/263] Compiling C object src/vulkan/wsi/libvulkan_wsi.a.p/wsi_common.c.o
+[74/263] Generating src/freedreno/vulkan/tu_entrypoints with a custom command
+[75/263] Generating src/freedreno/vulkan/tu_tracepoints.[ch] with a custom command
+[76/263] Compiling C object src/vulkan/wsi/libvulkan_wsi.a.p/wsi_common_wayland.c.o
+[77/263] Compiling C object src/vulkan/wsi/libvulkan_wsi.a.p/wsi_common_x11.c.o
+[78/263] Compiling C object src/gallium/auxiliary/pipe-loader/libpipe_loader_dynamic.a.p/pipe_loader.c.o
+[79/263] Compiling C object src/vulkan/runtime/libvulkan_runtime.a.p/vk_texcompress_etc2.c.o
+[80/263] Compiling C object src/gallium/auxiliary/pipe-loader/libpipe_loader_dynamic.a.p/pipe_loader_sw.c.o
+[81/263] Compiling C object src/gallium/auxiliary/pipe-loader/libpipe_loader_dynamic.a.p/pipe_loader_drm.c.o
+[82/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_graphics_state.c.o
+[83/263] Compiling C object src/gallium/frontends/xa/libxa_st.a.p/xa_composite.c.o
+[84/263] Compiling C object src/gallium/frontends/xa/libxa_st.a.p/xa_context.c.o
+[85/263] Compiling C object src/gallium/frontends/xa/libxa_st.a.p/xa_renderer.c.o
+[86/263] Compiling C object src/gallium/frontends/xa/libxa_st.a.p/xa_yuv.c.o
+[87/263] Compiling C object src/vulkan/runtime/libvulkan_runtime.a.p/vk_meta_copy_fill_update.c.o
+[88/263] Compiling C object src/gallium/frontends/xa/libxa_st.a.p/xa_tracker.c.o
+[89/263] Compiling C object src/gallium/frontends/xa/libxa_st.a.p/xa_tgsi.c.o
+[90/263] Compiling C object src/vulkan/wsi/libvulkan_wsi.a.p/wsi_common_display.c.o
+[91/263] Compiling C object src/glx/libglx.a.p/clientattrib.c.o
+[92/263] Compiling C object src/glx/libglx.a.p/meson-generated_.._.._mapi_glapi_gen_indirect_size.c.o
+[93/263] Compiling C object src/glx/libglx.a.p/clientinfo.c.o
+../src/glx/clientinfo.c: In function ‘glxSendClientInfo’:
+../src/glx/clientinfo.c:128:19: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  128 |     char *match = strstr(haystack, "GLX_ARB_create_context");
+      |                   ^~~~~~
+[94/263] Compiling C object src/glx/libglx.a.p/create_context.c.o
+[95/263] Compiling C object src/glx/libglx.a.p/compsize.c.o
+[96/263] Compiling C object src/glx/libglx.a.p/dri_common_query_renderer.c.o
+[97/263] Compiling C object src/glx/libglx.a.p/eval.c.o
+[98/263] Compiling C object src/glx/libglx.a.p/glxconfig.c.o
+[99/263] Compiling C object src/glx/libglx.a.p/drisw_glx.c.o
+[100/263] Compiling C object src/glx/libglx.a.p/meson-generated_.._.._mapi_glapi_gen_indirect_init.c.o
+[101/263] Compiling C object src/glx/libglx.a.p/dri_common.c.o
+[102/263] Compiling C object src/glx/libglx.a.p/glxcurrent.c.o
+[103/263] Compiling C object src/glx/libglx.a.p/glx_error.c.o
+[104/263] Linking target src/gallium/targets/dri/libgallium-24.3.0.so
+[105/263] Compiling C object src/glx/libglx.a.p/glxhash.c.o
+[106/263] Compiling C object src/glx/libglx.a.p/glx_query.c.o
+[107/263] Compiling C object src/glx/libglx.a.p/indirect_texture_compression.c.o
+[108/263] Compiling C object src/glx/libglx.a.p/glxext.c.o
+[109/263] Compiling C object src/glx/libglx.a.p/glxextensions.c.o
+[110/263] Compiling C object src/glx/libglx.a.p/indirect_transpose_matrix.c.o
+[111/263] Compiling C object src/glx/libglx.a.p/indirect_glx.c.o
+[112/263] Compiling C object src/glx/libglx.a.p/indirect_vertex_program.c.o
+[113/263] Compiling C object src/glx/libglx.a.p/indirect_window_pos.c.o
+[114/263] Compiling C object src/glx/libglx.a.p/glx_pbuffer.c.o
+[115/263] Compiling C object src/glx/libglx.a.p/query_renderer.c.o
+[116/263] Compiling C object src/glx/libglx.a.p/pixelstore.c.o
+[117/263] Compiling C object src/glx/libglx.a.p/render2.c.o
+[118/263] Compiling C object src/glx/libglx.a.p/singlepix.c.o
+[119/263] Compiling C object src/glx/libglx.a.p/renderpix.c.o
+[120/263] Compiling C object src/glx/libglx.a.p/glxcmds.c.o
+[121/263] Compiling C object src/glx/libglx.a.p/vertarr.c.o
+[122/263] Compiling C object src/glx/libglx.a.p/indirect_vertex_array.c.o
+[123/263] Compiling C object src/glx/libglx.a.p/pixel.c.o
+[124/263] Compiling C object src/glx/libglx.a.p/glxglvnd.c.o
+../src/glx/glxglvnd.c: In function ‘FindGLXFunction’:
+../src/glx/glxglvnd.c:31:11: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   31 |     match = bsearch(name, __glXDispatchTableStrings, DI_FUNCTION_COUNT,
+      |           ^
+[125/263] Compiling C object src/glx/libglx.a.p/single2.c.o
+[126/263] Compiling C object src/glx/libglx.a.p/dri3_glx.c.o
+[127/263] Linking static target src/x11/libloader_x11.a
+[128/263] Linking static target src/loader/libloader_wayland_helper.a
+[129/263] Linking static target src/mapi/glapi/libglapi_bridge.a
+[130/263] Linking target src/gbm/libgbm.so.1.0.0
+[131/263] Compiling C object src/glx/libglx.a.p/xfont.c.o
+[132/263] Linking static target src/egl/wayland/wayland-drm/libwayland_drm.a
+[133/263] Linking static target src/vulkan/runtime/libvulkan_instance.a
+[134/263] Linking static target src/vulkan/runtime/libvulkan_runtime.a
+[135/263] Linking static target src/vulkan/wsi/libvulkan_wsi.a
+[136/263] Compiling C object src/glx/libglx.a.p/g_glxglvnddispatchfuncs.c.o
+[137/263] Generating src/egl/g_egldispatchstubs.c with a custom command (wrapped by meson to capture output)
+[138/263] Compiling C object src/freedreno/fdl/fd5_layout.p/fd5_layout_test.c.o
+[139/263] Compiling C object src/freedreno/fdl/fd5_layout.p/fd_layout_test.c.o
+[140/263] Generating src/egl/g_egldispatchstubs.h with a custom command (wrapped by meson to capture output)
+[141/263] Compiling C object src/freedreno/ir3/ir3_disasm.p/tests_disasm.c.o
+[142/263] Compiling C object src/freedreno/ir3/ir3_delay_test.p/tests_delay.c.o
+[143/263] Compiling C object src/freedreno/fdl/fd6_layout.p/fd_layout_test.c.o
+[144/263] Compiling C object src/freedreno/fdl/fd6_layout.p/fd6_layout_test.c.o
+[145/263] Compiling C++ object src/freedreno/vulkan/libvulkan_freedreno.so.p/meson-generated_.._tu_entrypoints.cc.o
+[146/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/meson-generated_.._vk_physical_device_features.c.o
+[147/263] Compiling C object src/freedreno/ir3/ir3_disasm.p/meson-generated_.._.._isa_ir3-isa.c.o
+[148/263] Compiling C++ object src/freedreno/vulkan/libvulkan_freedreno.so.p/layers_tu_rmv_layer.cc.o
+[149/263] Compiling C++ object src/freedreno/vulkan/libvulkan_freedreno.so.p/meson-generated_.._tu_tracepoints.cc.o
+FAILED: [code=1] src/freedreno/vulkan/libvulkan_freedreno.so.p/meson-generated_.._tu_tracepoints.cc.o 
+c++ -Isrc/freedreno/vulkan/libvulkan_freedreno.so.p -Isrc/freedreno/vulkan -I../src/freedreno/vulkan -Iinclude -I../include -Isrc -I../src -Isrc/freedreno -I../src/freedreno -Isrc/freedreno/registers -I../src/freedreno/registers -Isrc/freedreno/registers/adreno -I../src/freedreno/registers/adreno -Isrc/freedreno/common -I../src/freedreno/common -Isrc/compiler/nir -I../src/compiler/nir -Isrc/compiler -I../src/compiler -Isrc/vulkan/util -I../src/vulkan/util -Isrc/vulkan/runtime -I../src/vulkan/runtime -Isrc/vulkan/wsi -I../src/vulkan/wsi -Isrc/util/format -Isrc/compiler/spirv -I/usr/include/libdrm -fvisibility=hidden -fdiagnostics-color=always -DNDEBUG -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c++17 -O3 -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS '-DPACKAGE_VERSION="24.3.0"' '-DPACKAGE_BUGREPORT="https://gitlab.freedesktop.org/mesa/mesa/-/issues"' -DHAVE_OPENGL=1 -DHAVE_OPENGL_ES_1=1 -DHAVE_OPENGL_ES_2=1 -DHAVE_ZINK -DHAVE_FREEDRENO -DHAVE_FREEDRENO_KGSL -DVK_ENABLE_BETA_EXTENSIONS -DVIDEO_CODEC_VC1DEC=0 -DVIDEO_CODEC_H264DEC=0 -DVIDEO_CODEC_H264ENC=0 -DVIDEO_CODEC_H265DEC=0 -DVIDEO_CODEC_H265ENC=0 -DVIDEO_CODEC_AV1DEC=1 -DVIDEO_CODEC_AV1ENC=1 -DVIDEO_CODEC_VP9DEC=1 -DHAVE_X11_PLATFORM -DHAVE_WAYLAND_PLATFORM -DHAVE_SURFACELESS_PLATFORM -DHAVE_DRM_PLATFORM -DHAVE_XCB_PLATFORM -DUSE_LIBGLVND=1 -DGLX_INDIRECT_RENDERING -DGLX_DIRECT_RENDERING -DGLX_USE_DRM -DGLAPI_EXPORT_PROTO_ENTRY_POINTS=0 -DALLOW_KCMP -DMESA_DEBUG=0 -DENABLE_SHADER_CACHE -DHAVE___BUILTIN_BSWAP32 -DHAVE___BUILTIN_BSWAP64 -DHAVE___BUILTIN_CLZ -DHAVE___BUILTIN_CLZLL -DHAVE___BUILTIN_CTZ -DHAVE___BUILTIN_EXPECT -DHAVE___BUILTIN_FFS -DHAVE___BUILTIN_FFSLL -DHAVE___BUILTIN_POPCOUNT -DHAVE___BUILTIN_POPCOUNTLL -DHAVE___BUILTIN_UNREACHABLE -DHAVE___BUILTIN_TYPES_COMPATIBLE_P -DHAVE_FUNC_ATTRIBUTE_CONST -DHAVE_FUNC_ATTRIBUTE_FLATTEN -DHAVE_FUNC_ATTRIBUTE_MALLOC -DHAVE_FUNC_ATTRIBUTE_PURE -DHAVE_FUNC_ATTRIBUTE_UNUSED -DHAVE_FUNC_ATTRIBUTE_WARN_UNUSED_RESULT -DHAVE_FUNC_ATTRIBUTE_WEAK -DHAVE_FUNC_ATTRIBUTE_FORMAT -DHAVE_FUNC_ATTRIBUTE_PACKED -DHAVE_FUNC_ATTRIBUTE_RETURNS_NONNULL -DHAVE_FUNC_ATTRIBUTE_ALIAS -DHAVE_FUNC_ATTRIBUTE_NORETURN -DHAVE_FUNC_ATTRIBUTE_OPTIMIZE -DHAVE_FUNC_ATTRIBUTE_VISIBILITY -DHAVE_UINT128 -DHAVE_REALLOCARRAY -DHAVE_FMEMOPEN -D_GNU_SOURCE -DUSE_GCC_ATOMIC_BUILTINS -DUSE_AARCH64_ASM -DMAJOR_IN_SYSMACROS -DHAS_SCHED_H -DHAS_SCHED_GETAFFINITY -DHAVE_LINUX_FUTEX_H -DHAVE_ENDIAN_H -DHAVE_DLFCN_H -DHAVE_SYS_SHM_H -DHAVE_SYS_INOTIFY_H -DHAVE_LINUX_UDMABUF_H -DHAVE_STRTOF -DHAVE_MKOSTEMP -DHAVE_MEMFD_CREATE -DHAVE_RANDOM_R -DHAVE_FLOCK -DHAVE_STRTOK_R -DHAVE_GETRANDOM -DHAVE_POSIX_FALLOCATE -DHAVE_SECURE_GETENV -DHAVE_GNU_QSORT_R -DHAVE_STRUCT_TIMESPEC -DHAVE_PROGRAM_INVOCATION_NAME -DHAVE_ISSIGNALING -DHAVE_POSIX_MEMALIGN -DHAVE_DIRENT_D_TYPE -DHAVE_STRTOD_L -DHAVE_DLADDR -DHAVE_DL_ITERATE_PHDR -DHAVE_ZLIB -DHAVE_ZSTD -DHAVE_COMPRESSION -DHAVE_PTHREAD -DHAVE_PTHREAD_SETAFFINITY -DHAVE_LIBDRM -DHAVE_LIBUDEV '-DMESA_LLVM_VERSION_STRING="21.1.8"' -DLLVM_IS_SHARED=1 -DLLVM_AVAILABLE=1 -DDRAW_LLVM_AVAILABLE=1 -DAMD_LLVM_AVAILABLE=1 -DGALLIVM_USE_ORCJIT=0 -DHAVE_SPIRV_TOOLS -DUSE_LIBELF -DTHREAD_SANITIZER=0 -DHAVE_LIBUNWIND -DWL_HIDE_DEPRECATED -DHAVE_WL_DISPATCH_QUEUE_TIMEOUT -DHAVE_WL_CREATE_QUEUE_WITH_NAME -DXCB_KEYSYMS_AVAILABLE -DHAVE_X11_DRM -DHAVE_DRI -DHAVE_DRI2 -DHAVE_DRI3_EXPLICIT_SYNC -DHAVE_DRISW_KMS -DHAVE_LIBSENSORS=1 -mtls-dialect=desc -Werror=return-type -Werror=empty-body -Wmisleading-indentation -Wno-non-virtual-dtor -Wno-missing-field-initializers -Wno-format-truncation -fno-math-errno -fno-trapping-math -flifetime-dse=1 -Wno-unknown-pragmas -Werror=format -Wformat-security -ffunction-sections -fdata-sections -Wno-unused-variable -Wno-unused-but-set-variable -fPIC -DVK_USE_PLATFORM_XCB_KHR -DVK_USE_PLATFORM_XLIB_KHR -DVK_USE_PLATFORM_WAYLAND_KHR -DVK_USE_PLATFORM_DISPLAY_KHR -DVK_USE_PLATFORM_XLIB_XRANDR_EXT -pthread -fno-exceptions -fno-rtti -Wno-array-bounds -Wno-class-memaccess -Wno-missing-braces -Wno-narrowing -Wno-pointer-arith -Wno-sign-compare -Wno-switch -Wno-unused-function -Wno-write-strings -DTU_HAS_KGSL -MD -MQ src/freedreno/vulkan/libvulkan_freedreno.so.p/meson-generated_.._tu_tracepoints.cc.o -MF src/freedreno/vulkan/libvulkan_freedreno.so.p/meson-generated_.._tu_tracepoints.cc.o.d -o src/freedreno/vulkan/libvulkan_freedreno.so.p/meson-generated_.._tu_tracepoints.cc.o -c src/freedreno/vulkan/tu_tracepoints.cc
+src/freedreno/vulkan/tu_tracepoints.cc: In function ‘void tu_gpu_tracepoint_config_variable()’:
+src/freedreno/vulkan/tu_tracepoints.cc:88:11: error: ‘once_flag’ does not name a type; did you mean ‘util_once_flag’?
+   88 |    static once_flag process_tu_gpu_tracepoint_variable_flag = ONCE_FLAG_INIT;
+      |           ^~~~~~~~~
+      |           util_once_flag
+src/freedreno/vulkan/tu_tracepoints.cc:90:15: error: ‘process_tu_gpu_tracepoint_variable_flag’ was not declared in this scope; did you mean ‘tu_gpu_tracepoint_variable_once’?
+   90 |    call_once(&process_tu_gpu_tracepoint_variable_flag,
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |               tu_gpu_tracepoint_variable_once
+src/freedreno/vulkan/tu_tracepoints.cc:90:4: error: ‘call_once’ was not declared in this scope; did you mean ‘calloc’?
+   90 |    call_once(&process_tu_gpu_tracepoint_variable_flag,
+      |    ^~~~~~~~~
+      |    calloc
+[150/263] Compiling C++ object src/freedreno/vulkan/libvulkan_freedreno.so.p/tu_buffer.cc.o
+[151/263] Compiling C++ object src/freedreno/vulkan/libvulkan_freedreno.so.p/tu_buffer_view.cc.o
+[152/263] Compiling C++ object src/freedreno/vulkan/libvulkan_freedreno.so.p/tu_autotune.cc.o
+[153/263] Compiling C++ object src/freedreno/vulkan/libvulkan_freedreno.so.p/tu_cs_breadcrumbs.cc.o
+[154/263] Compiling C object src/glx/libglx.a.p/meson-generated_.._.._mapi_glapi_gen_indirect.c.o
+[155/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/meson-generated_.._vk_cmd_queue.c.o
+[156/263] Compiling C object src/vulkan/runtime/libvulkan_lite_runtime.a.p/vk_video.c.o
+[157/263] Compiling C++ object src/freedreno/vulkan/libvulkan_freedreno.so.p/tu_clear_blit.cc.o
+[158/263] Compiling C++ object src/freedreno/vulkan/libvulkan_freedreno.so.p/tu_cmd_buffer.cc.o
+ninja: build stopped: subcommand failed.
