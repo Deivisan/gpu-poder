@@ -788,9 +788,9 @@ clc_compile_to_llvm_module(LLVMContext &llvm_ctx,
 
    clang::DiagnosticsEngine diag {
       new clang::DiagnosticIDs,
-      new clang::DiagnosticOptions,
+      *new clang::DiagnosticOptions,
       new clang::TextDiagnosticPrinter(diag_log_stream,
-                                       &c->getDiagnosticOpts())
+                                       c->getDiagnosticOpts())
    };
 
 #if LLVM_VERSION_MAJOR >= 17
@@ -843,10 +843,10 @@ clc_compile_to_llvm_module(LLVMContext &llvm_ctx,
 
    c->createDiagnostics(new clang::TextDiagnosticPrinter(
                            diag_log_stream,
-                           &c->getDiagnosticOpts()));
+                           c->getDiagnosticOpts()));
 
    c->setTarget(clang::TargetInfo::CreateTargetInfo(
-                   c->getDiagnostics(), c->getInvocation().TargetOpts));
+                   c->getDiagnostics(), c->getInvocation().getTargetOpts()));
 
    c->getFrontendOpts().ProgramAction = clang::frontend::EmitLLVMOnly;
 
@@ -1407,11 +1407,11 @@ initialize_llvm_once(void)
    LLVMInitializeAllAsmPrinters();
 }
 
-std::mesa_once_flag initialize_llvm_once_flag;
+mesa_once_flag initialize_llvm_once_flag = MESA_ONCE_FLAG_INIT;
 
 void
 clc_initialize_llvm(void)
 {
-   std::mesa_call_once(initialize_llvm_once_flag,
+   mesa_call_once(&initialize_llvm_once_flag,
                   []() { initialize_llvm_once(); });
 }

@@ -405,7 +405,15 @@ src_template = """\
 #include "util/u_debug.h"
 #include "util/perf/u_trace_priv.h"
 #include "c11/threads.h"
-#include "c11/threads.h"
+#ifndef once_flag
+#define once_flag mesa_once_flag
+#endif
+#ifndef ONCE_FLAG_INIT
+#define ONCE_FLAG_INIT MESA_ONCE_FLAG_INIT
+#endif
+#ifndef call_once
+#define call_once mesa_call_once
+#endif
 
 % if trace_toggle_name is not None:
 static const struct debug_control config_control[] = {
