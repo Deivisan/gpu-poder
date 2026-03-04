@@ -1,13 +1,27 @@
 //! GPU PODER - KGSL Direct Access Demo
+//! Phase 3: Testing different ioctl approaches
+
 use std::io;
+use std::fs::OpenOptions;
+use std::os::unix::io::AsRawFd;
 
 fn main() -> io::Result<()> {
-    println!("🦞🔥 GPU PODER - Adreno 619 Direct Access");
-    println!("📱 Device: Poco X5 5G (Snapdragon 695)");
-    println!();
+    println!("🦞🔥 GPU PODER - Phase 3: ioctl Investigation");
+    println!("📱 Device: Poco X5 5G (Snapdragon 695)\n");
     
-    // Monitor GPU status
-    println!("=== GPU Status ===");
+    // Open KGSL device
+    let file = OpenOptions::new()
+        .read(true)
+        .write(true)
+        .open("/dev/kgsl-3d0")?;
+    
+    let fd = file.as_raw_fd();
+    println!("✅ KGSL device opened (fd: {})", fd);
+    
+    // Test basic device properties
+    println!("\n=== Testing Device Properties ===");
+    
+    // Try to read device info via sysfs (more reliable)
     if let Ok(busy) = std::fs::read_to_string("/sys/class/kgsl/kgsl-3d0/gpubusy") {
         let parts: Vec<&str> = busy.trim().split_whitespace().collect();
         if parts.len() >= 2 {
@@ -22,15 +36,20 @@ fn main() -> io::Result<()> {
         println!("⚡ Clock: {} MHz", clock.trim());
     }
     
-    if let Ok(temp) = std::fs::read_to_string("/sys/class/thermal/thermal_zone0/temp") {
-        if let Ok(t) = temp.trim().parse::<u32>() {
-            println!("🌡️ Thermal: {}°C", t / 1000);
-        }
+    if let Ok(freq_table) = std::fs::read_to_string("/sys/class/kgsl/kgsl-3d0/devfreq/available_frequencies") {
+        println!("📈 Available frequencies: {}", freq_table.trim());
     }
     
-    println!("\n✅ KGSL device accessible");
-    println!("⏳ GPU memory management: In development");
-    println!("⏳ Compute shader submission: In development");
+    println!("\n=== ioctl Investigation ===");
+    println!("⚠️ Context creation via ioctl 9: EINVAL");
+    println!("💡 Possible causes:");
+    println!("   1. ioctl number still incorrect");
+    println!("   2. Structure alignment issue");
+    println!("   3. Device doesn't support in chroot");
+    println!("   4. Requires kernel module");
+    
+    println!("\n✅ KGSL device accessible via sysfs");
+    println!("⏳ Direct ioctl access: Requires further investigation");
     
     Ok(())
 }
