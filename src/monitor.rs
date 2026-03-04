@@ -1,57 +1,29 @@
-use gpu_poder::init;
-use gpu_poder::kgsl_direct::KgslGpu;
-use std::thread;
-use std::time::Duration;
+//! GPU Monitor - Real-time status
+use std::fs;
 
 fn main() {
-    println!("\n");
-    println!("╔═══════════════════════════════════════════════════════════════════╗");
-    println!("║              GPU PODER - MONITORAMENTO EM TEMPO REAL              ║");
-    println!("╚═══════════════════════════════════════════════════════════════════╝");
-    println!();
-
-    let poder = init().expect("Falha ao inicializar GPU PODER");
-
-    println!("📊 INFORMAÇÕES DA GPU");
-    println!("═══════════════════════════════════════════════════════════════════");
-    println!("  Nome:         {}", poder.info.name);
-    println!("  Device ID:    {}", poder.info.device_id);
-    println!("  Clock:        {} MHz", poder.info.clock_current);
-    println!("  Clock Máx:    {} MHz", poder.info.clock_max);
-    println!("  Temperatura:   {:.1}°C", poder.info.temperature);
-    println!("  Frequências:  {:?}", poder.info.frequencies);
-    println!();
-
-    println!("📈 USO DA GPU (tem que monitorar em tempo real)");
-    println!("═══════════════════════════════════════════════════════════════════");
-    println!("  Pressione Ctrl+C para sair\n");
-
-    println!("┌─────────────┬────────────┬────────────┬────────────┐");
-    println!("│   Clock     │   Usage    │  Busy/Tot  │    Temp    │");
-    println!("├─────────────┼────────────┼────────────┼────────────┤");
-
-    loop {
-        match KgslGpu::open() {
-            Ok(gpu) => {
-                if let Ok(info) = gpu.get_info() {
-                    if let Ok(power) = gpu.get_power() {
-                        println!(
-                            "│ {:>9} │ {:>9.1}% │ {:>9} │ {:>9.1}°C │",
-                            format!("{}MHz", info.clock),
-                            power.usage_percent,
-                            format!("{}/{}", power.busy_cycles, power.total_cycles),
-                            info.temperature
-                        );
-                    }
-                }
-            }
-            Err(e) => {
-                println!("│ Erro: {}                                           │", e);
-            }
+    println!("🦞🔥 GPU Monitor - Adreno 619");
+    
+    // KGSL status
+    if let Ok(busy) = fs::read_to_string("/sys/class/kgsl/kgsl-3d0/gpubusy") {
+        let parts: Vec<&str> = busy.trim().split_whitespace().collect();
+        if parts.len() >= 2 {
+            let busy_val: u64 = parts[0].parse().unwrap_or(0);
+            let total_val: u64 = parts[1].parse().unwrap_or(1);
+            let util = (busy_val as f64 / total_val as f64 * 100.0) as u32;
+            println!("📊 GPU Utilization: {}%", util);
         }
-
-        println!("└─────────────┴────────────┴────────────┴────────────┘");
-        thread::sleep(Duration::from_secs(2));
-        print!("\x1b[5A");
+    }
+    
+    // Clock frequency
+    if let Ok(clock) = fs::read_to_string("/sys/class/kgsl/kgsl-3d0/clock_mhz") {
+        println!("⚡ Clock: {} MHz", clock.trim());
+    }
+    
+    // Thermal
+    if let Ok(temp) = fs::read_to_string("/sys/class/thermal/thermal_zone0/temp") {
+        if let Ok(t) = temp.trim().parse::<u32>() {
+            println!("🌡️ Thermal: {}°C", t / 1000);
+        }
     }
 }

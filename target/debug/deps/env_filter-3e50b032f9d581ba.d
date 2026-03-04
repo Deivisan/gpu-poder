@@ -1,0 +1,12 @@
+/root/Projetos/gpu-poder/target/debug/deps/env_filter-3e50b032f9d581ba.d: /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-1.0.0/src/lib.rs /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-1.0.0/src/directive.rs /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-1.0.0/src/filter.rs /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-1.0.0/src/filtered_log.rs /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-1.0.0/src/op.rs /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-1.0.0/src/parser.rs
+
+/root/Projetos/gpu-poder/target/debug/deps/libenv_filter-3e50b032f9d581ba.rlib: /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-1.0.0/src/lib.rs /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-1.0.0/src/directive.rs /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-1.0.0/src/filter.rs /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-1.0.0/src/filtered_log.rs /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-1.0.0/src/op.rs /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-1.0.0/src/parser.rs
+
+/root/Projetos/gpu-poder/target/debug/deps/libenv_filter-3e50b032f9d581ba.rmeta: /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-1.0.0/src/lib.rs /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-1.0.0/src/directive.rs /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-1.0.0/src/filter.rs /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-1.0.0/src/filtered_log.rs /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-1.0.0/src/op.rs /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-1.0.0/src/parser.rs
+
+/root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-1.0.0/src/lib.rs:
+/root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-1.0.0/src/directive.rs:
+/root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-1.0.0/src/filter.rs:
+/root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-1.0.0/src/filtered_log.rs:
+/root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-1.0.0/src/op.rs:
+/root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-1.0.0/src/parser.rs:

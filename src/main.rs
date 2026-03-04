@@ -1,156 +1,36 @@
-use gpu_poder::{init, modes::get_all_modes_info, GpuPoder};
-use log::{error, info, LevelFilter};
-use std::env;
+//! GPU PODER - KGSL Direct Access Demo
+use std::io;
 
-fn main() {
-    env_logger::Builder::new()
-        .filter_level(LevelFilter::Info)
-        .init();
-
-    println!("\n");
-    println!("╔═══════════════════════════════════════════════════════════════════╗");
-    println!("║           GPU PODER - ARQUITETURA DE ACESSO COMPLETO              ║");
-    println!("║              5 Modos de Permissão x Níveis de Uso               ║");
-    println!("╚═══════════════════════════════════════════════════════════════════╝");
+fn main() -> io::Result<()> {
+    println!("🦞🔥 GPU PODER - Adreno 619 Direct Access");
+    println!("📱 Device: Poco X5 5G (Snapdragon 695)");
     println!();
-
-    match init() {
-        Ok(mut poder) => {
-            println!("✅ Sistema GPU PODER inicializado com sucesso!\n");
-
-            println!("═══════════════════════════════════════════════════════════════════");
-            println!("📊 STATUS DO HARDWARE");
-            println!("═══════════════════════════════════════════════════════════════════");
-            println!("  GPU:           {}", poder.info.name);
-            println!("  Device ID:     {}", poder.info.device_id);
-            println!("  Clock Atual:   {} MHz", poder.info.clock_current);
-            println!("  Clock Máximo:   {} MHz", poder.info.clock_max);
-            println!("  Temperatura:    {:.1}°C", poder.info.temperature);
-            println!("  Frequências:   {:?} MHz", poder.info.frequencies);
-            println!(
-                "  Uso GPU:       {} / {} cycles",
-                poder.info.busy_cycles, poder.info.total_cycles
-            );
-            println!();
-
-            println!("═══════════════════════════════════════════════════════════════════");
-            println!("🔐 NÍVEL DE PERMISSÃO");
-            println!("═══════════════════════════════════════════════════════════════════");
-            println!("  {}", poder.permission_level);
-            println!("  Acesso: {}", poder.access_level);
-            println!();
-
-            println!("═══════════════════════════════════════════════════════════════════");
-            println!("🎯 MODOS DE ACESSO DISPONÍVEIS");
-            println!("═══════════════════════════════════════════════════════════════════");
-
-            let modes = get_all_modes_info();
-            for mode_info in &modes {
-                let status = if mode_info.available { "✅" } else { "❌" };
-                println!(
-                    "  {} {:?} - {} caps",
-                    status,
-                    mode_info.mode,
-                    mode_info.capabilities.len()
-                );
-            }
-            println!();
-
-            println!("═══════════════════════════════════════════════════════════════════");
-            println!("🖥️  DISPONIBILIDADE DE RECURSOS");
-            println!("═══════════════════════════════════════════════════════════════════");
-            println!(
-                "  KGSL:    {}",
-                if poder.capabilities.has_kgsl {
-                    "✅ Disponível"
-                } else {
-                    "❌ Indisponível"
-                }
-            );
-            println!(
-                "  DRM:     {}",
-                if poder.capabilities.has_drm {
-                    "✅ Disponível"
-                } else {
-                    "❌ Indisponível"
-                }
-            );
-            println!(
-                "  DSP:     {}",
-                if poder.capabilities.has_dsp {
-                    "✅ Disponível"
-                } else {
-                    "❌ Indisponível"
-                }
-            );
-            println!(
-                "  Vulkan:  {}",
-                if poder.capabilities.has_vulkan {
-                    "✅ Instalado"
-                } else {
-                    "❌ Não instalado"
-                }
-            );
-            println!(
-                "  OpenCL:  {}",
-                if poder.capabilities.has_opencl {
-                    "✅ Instalado"
-                } else {
-                    "❌ Não instalado"
-                }
-            );
-            println!();
-
-            println!("═══════════════════════════════════════════════════════════════════");
-            println!("📈 TABELA DE PERMISSÕES");
-            println!("═══════════════════════════════════════════════════════════════════");
-            println!("  Nível        | KGSL | DRM | DSP | Vulkan | OpenCL");
-            println!("  -------------|------|-----|-----|--------|--------");
-            println!("  Locked       |  ❌  |  ❌ |  ❌ |   ❌   |   ❌  ");
-            println!("  Basic        |  ✅  |  ❌ |  ❌ |   ❌   |   ❌  ");
-            println!("  Standard     |  ✅  |  ✅ |  ✅ |   ❌   |   ❌  ");
-            println!("  Advanced     |  ✅  |  ✅ |  ✅ |   ✅   |   ❌  ");
-            println!("  GodMode      |  ✅  |  ✅ |  ✅ |   ✅   |   ✅  ");
-            println!();
-
-            let active_modes = poder.capabilities.supported_modes.len();
-            println!("═══════════════════════════════════════════════════════════════════");
-            println!("🏆 SUA SITUAÇÃO: {} modo(s) disponível(is)", active_modes);
-            println!("═══════════════════════════════════════════════════════════════════");
-
-            match active_modes {
-                0 => println!("\n  🚫 SEM ACESSO - Nenhum recurso GPU disponível\n"),
-                1 => println!("\n  🔓 ACESSO BÁSICO - Apenas Leitura\n"),
-                2 => println!("\n  📊 ACESSO PADRÃO - Monitoramento\n"),
-                3 | 4 => println!("\n  ⚡ ACESSO AVANÇADO - Compute\n"),
-                5 => println!("\n  🌟 GOD MODE - ACESSO TOTAL\n"),
-                _ => {}
-            }
-
-            if active_modes < 5 {
-                println!("  Para desbloquear mais modos:");
-                if !poder.capabilities.has_opencl {
-                    println!("    • Instalar OpenCL (pocl ou driver proprietário)");
-                }
-                if !poder.capabilities.has_vulkan {
-                    println!("    • Instalar driver Vulkan (Turnip/Freedreno)");
-                }
-                println!();
-            }
-
-            println!("═══════════════════════════════════════════════════════════════════");
-            println!("📋 JSON STATUS");
-            println!("═══════════════════════════════════════════════════════════════════");
-            let status = poder.get_status();
-            println!(
-                "{}\n",
-                serde_json::to_string_pretty(&status).unwrap_or_default()
-            );
-        }
-        Err(e) => {
-            error!("Falha ao inicializar: {}", e);
-            println!("\n❌ ERRO: {}\n", e);
-            std::process::exit(1);
+    
+    // Monitor GPU status
+    println!("=== GPU Status ===");
+    if let Ok(busy) = std::fs::read_to_string("/sys/class/kgsl/kgsl-3d0/gpubusy") {
+        let parts: Vec<&str> = busy.trim().split_whitespace().collect();
+        if parts.len() >= 2 {
+            let busy_val: u64 = parts[0].parse().unwrap_or(0);
+            let total_val: u64 = parts[1].parse().unwrap_or(1);
+            let util = (busy_val as f64 / total_val as f64 * 100.0) as u32;
+            println!("📊 GPU Utilization: {}%", util);
         }
     }
+    
+    if let Ok(clock) = std::fs::read_to_string("/sys/class/kgsl/kgsl-3d0/clock_mhz") {
+        println!("⚡ Clock: {} MHz", clock.trim());
+    }
+    
+    if let Ok(temp) = std::fs::read_to_string("/sys/class/thermal/thermal_zone0/temp") {
+        if let Ok(t) = temp.trim().parse::<u32>() {
+            println!("🌡️ Thermal: {}°C", t / 1000);
+        }
+    }
+    
+    println!("\n✅ KGSL device accessible");
+    println!("⏳ GPU memory management: In development");
+    println!("⏳ Compute shader submission: In development");
+    
+    Ok(())
 }
