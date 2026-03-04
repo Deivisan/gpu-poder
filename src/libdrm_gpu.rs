@@ -1,7 +1,7 @@
 //! libdrm GPU Access - Alternative to raw ioctl
 //! Uses libdrm for proper KGSL device management
 
-use libc::{c_int, c_uint, c_void};
+use libc::{c_int, c_uint};
 
 // libdrm function declarations
 extern "C" {

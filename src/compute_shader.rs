@@ -17,7 +17,7 @@ impl ComputeShader {
     }
 
     /// Simple matrix multiply kernel
-    pub fn matrix_multiply(&self, cmd_buf: &mut CommandBuffer, size: u32) -> std::io::Result<()> {
+    pub fn matrix_multiply(&self, _cmd_buf: &mut CommandBuffer, size: u32) -> std::io::Result<()> {
         println!("🧮 Matrix multiply kernel: {}x{}", size, size);
         println!("   Workgroup: {:?}", self.workgroup_size);
         

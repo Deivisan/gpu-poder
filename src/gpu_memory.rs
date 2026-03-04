@@ -1,7 +1,6 @@
 //! GPU Memory Management via KGSL
 //! Allocation, mapping, and synchronization
 
-use std::os::unix::io::AsRawFd;
 use nix::ioctl_readwrite;
 use libc::{c_uint, c_ulong};
 
