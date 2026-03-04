@@ -1,14 +1,29 @@
-//! GPU PODER - Phase 5: Compute Execution
-//! Matrix multiply benchmark: CPU vs GPU
+//! GPU PODER - Phase 6: libdrm GPU Command Submission
+//! Using libdrm instead of raw ioctl
 
-use gpu_poder::{KgslDevice, CommandBuffer, ComputeShader};
+use gpu_poder::{KgslDevice, CommandBuffer, ComputeShader, LibdrmDevice};
 use std::io;
 use std::time::Instant;
 
 fn main() -> io::Result<()> {
-    println!("🦞🔥 GPU PODER - Phase 5: Compute Execution");
+    println!("🦞🔥 GPU PODER - Phase 6: libdrm GPU Access");
     println!("📱 Device: Poco X5 5G (Snapdragon 695)\n");
     
+    // 1. Try libdrm approach
+    println!("=== Attempting libdrm ===");
+    match LibdrmDevice::open() {
+        Ok(drm) => {
+            println!("✅ libdrm device opened");
+            match drm.get_version() {
+                Ok(version) => println!("✅ DRM version: {}", version),
+                Err(e) => println!("⚠️ DRM version: {}", e),
+            }
+        },
+        Err(e) => println!("⚠️ libdrm failed: {}", e),
+    }
+    
+    // 2. Fallback: KGSL direct
+    println!("\n=== KGSL Direct Access ===");
     let _device = KgslDevice::open()?;
     println!("✅ KGSL device opened");
     
@@ -19,6 +34,7 @@ fn main() -> io::Result<()> {
     shader.set_workgroup_size(256, 1, 1);
     println!("✅ Compute shader created");
     
+    // 3. CPU Benchmark
     println!("\n=== CPU Benchmark ===");
     let size = 512usize;
     let start = Instant::now();
@@ -26,6 +42,7 @@ fn main() -> io::Result<()> {
     let cpu_time = start.elapsed();
     println!("⏱️ CPU time: {:.3}ms", cpu_time.as_secs_f64() * 1000.0);
     
+    // 4. GPU Status
     println!("\n=== GPU Status ===");
     if let Ok(busy) = std::fs::read_to_string("/sys/class/kgsl/kgsl-3d0/gpubusy") {
         let parts: Vec<&str> = busy.trim().split_whitespace().collect();
@@ -41,7 +58,8 @@ fn main() -> io::Result<()> {
         println!("⚡ Clock: {} MHz", clock.trim());
     }
     
-    println!("\n✅ Phase 5 complete");
+    println!("\n✅ Phase 6 infrastructure ready");
+    println!("⏳ Next: GPU command submission via libdrm or sysfs");
     
     Ok(())
 }
