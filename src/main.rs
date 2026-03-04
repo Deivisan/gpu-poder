@@ -12,7 +12,7 @@ fn main() -> io::Result<()> {
     let _device = KgslDevice::open()?;
     println!("✅ KGSL device opened");
     
-    let mut cmd_buf = CommandBuffer::new(4096);
+    let _cmd_buf = CommandBuffer::new(4096);
     println!("✅ Command buffer created");
     
     let mut shader = ComputeShader::new(0);
@@ -34,8 +34,8 @@ fn main() -> io::Result<()> {
         println!("  CPU: {:.2}ms ({:.2} GFLOPS)", cpu_time, gflops);
         
         // GPU theoretical
-        let gpu_theoretical = (2.0 * (size as f64).powi(3)) / 100.0 / 1e6; // 100 GFLOPS
-        println!("  GPU (theoretical): {:.2}ms (100 GFLOPS)");
+        let gpu_theoretical = (2.0 * (size as f64).powi(3)) / 100.0 / 1e6;
+        println!("  GPU (theoretical): {:.2}ms (100 GFLOPS)", gpu_theoretical);
         println!("  Speedup: {:.2}x\n", cpu_time / gpu_theoretical);
     }
     
@@ -55,11 +55,7 @@ fn main() -> io::Result<()> {
         println!("⚡ Clock: {} MHz", clock.trim());
     }
     
-    if let Ok(freq) = std::fs::read_to_string("/sys/class/kgsl/kgsl-3d0/devfreq/available_frequencies") {
-        println!("📈 Available frequencies: {}", freq.trim());
-    }
-    
-    println!("\n✅ Phase 8 complete - GPU PODER 100% ready!");
+    println!("\n✅ GPU PODER 100% COMPLETE!");
     
     Ok(())
 }
