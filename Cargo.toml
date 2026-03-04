@@ -23,6 +23,7 @@ name = "monitor"
 path = "src/monitor.rs"
 
 [build-dependencies]
+pkg-config = "0.3"
 
 [profile.release]
 opt-level = 3
